@@ -13,10 +13,77 @@
     <header class="header">
       <div class="container">
         <div class="header__wrapper">
+          <div class="header__burger">
+            <button class="header__burger-button">
+              <span class="header__burger-button-line"></span>
+            </button>
+          </div>
+
+          <div class="header__left">
+            <div class="header__unlymeos">
+              <button class="header__unlymeos-button button button_primary">Go to Unlyme OS</button>
+            </div>
+
+            <div class="header__info">
+              <div class="header__info-title">Information</div>
+
+              <ul class="header__info-menu">
+                <li class="header__info-menu-item">
+                  <a class="header__info-menu-item-link" href="#">Link 01</a>
+                </li>
+                <li class="header__info-menu-item">
+                  <a class="header__info-menu-item-link" href="#">Link 02</a>
+                </li>
+                <li class="header__info-menu-item">
+                  <a class="header__info-menu-item-link" href="#">Link 03</a>
+                </li>
+                <li class="header__info-menu-item">
+                  <a class="header__info-menu-item-link" href="#">Link 04</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
           <div class="header__logo">
             <a class="header__logo-link" href="./">
               <img class="header__logo-link-image" src="./assets/logo.webp" alt="logo" />
             </a>
+          </div>
+
+          <div class="header__right">
+            <div class="header__controls">
+              <div class="header__controls-currency custom-select" data-value="USD">
+                <select id="currency" name="currency">
+                  <option value="USD">USD <b>$</b></option>
+                  <option value="EUR">EUR <b>€</b></option>
+                  <option value="CHF">CHF <b>CHF</b></option>
+                </select>
+              </div>
+
+              <div class="header__controls-lang custom-select" data-value="1">
+                <select id="lang" name="lang">
+                  <option value="0">EN</option>
+                  <option value="1">IT</option>
+                  <option value="2">NL</option>
+                  <option value="3">العربية</option>
+                  <option value="4">FR</option>
+                  <option value="5">ES</option>
+                  <option value="6">DA</option>
+                  <option value="7">中文</option>
+                  <option value="8">DE</option>
+                  <option value="9">PT</option>
+                  <option value="10">TR</option>
+                  <option value="11">日本語</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="header__auth">
+              <button class="header__auth-button"></button>
+
+              <button class="button button_primary">Log In</button>
+              <button class="button button_secondary">Sign Up</button>
+            </div>
           </div>
         </div>
       </div>
