@@ -1,0 +1,39 @@
+.header {
+  background-color: #ffd209;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 90px;
+    padding: 23px 0 28px;
+    box-sizing: border-box;
+
+    @include laptop {
+      min-height: 65px;
+      padding: 20px 0;
+    }
+  }
+
+  &__logo {
+    flex: 0 1 auto;
+    width: fit-content;
+
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        width: 180px;
+        height: auto;
+
+        @include laptop {
+          width: 144px;
+        }
+      }
+    }
+  }
+}

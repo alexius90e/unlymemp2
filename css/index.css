@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Sora:wght@100..800&display=swap");
+html {
+  font-size: 16px;
+  font-family: "Sora", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  overflow-y: scroll;
+  color: #181d42;
+  background-color: #ffffff;
+}
+
+a,
+button,
+input,
+textarea {
+  font-family: "Sora", sans-serif;
+  text-decoration: none;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1232px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: #ffd209;
+}
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 90px;
+  padding: 23px 0 28px;
+  box-sizing: border-box;
+}
+@media (max-width: 992px) {
+  .header__wrapper {
+    min-height: 65px;
+    padding: 20px 0;
+  }
+}
+.header__logo {
+  flex: 0 1 auto;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.header__logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__logo-link-image {
+  display: block;
+  max-width: 100%;
+  width: 180px;
+  height: auto;
+}
+@media (max-width: 992px) {
+  .header__logo-link-image {
+    width: 144px;
+  }
+}
