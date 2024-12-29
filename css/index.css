@@ -184,7 +184,10 @@ img {
 }
 
 .header {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 999;
   background-color: #ffd209;
 }
@@ -197,13 +200,13 @@ img {
   justify-content: space-between;
   gap: 16px;
   min-height: 90px;
-  padding: 23px 0 28px;
+  padding: 21px 0 26px;
   box-sizing: border-box;
 }
 @media (max-width: 1024px) {
   .header__wrapper {
     min-height: 65px;
-    padding: 20px 0;
+    padding: 18px 0;
   }
 }
 .header__left, .header__right {
@@ -214,7 +217,7 @@ img {
 }
 @media (max-width: 1200px) {
   .header__left, .header__right {
-    flex: 0 1 auto;
+    flex: 0 0 auto;
   }
 }
 .header__left .custom-select .select-selected, .header__right .custom-select .select-selected {
@@ -350,9 +353,7 @@ img {
   background-color: #ffffff;
   box-shadow: 5px 5px 0px #000000;
   opacity: 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  pointer-events: none;
   transition: opacity ease-in-out 0.2s;
 }
 .header__info-menu-item {
@@ -405,11 +406,15 @@ img {
   display: flex;
   align-items: center;
   gap: 20px;
+  flex: 0 0 auto;
 }
 @media (max-width: 576px) {
   .header__controls {
     gap: 10px;
   }
+}
+.header__controls-currency {
+  flex: 0 0 auto;
 }
 .header__controls-currency .select-selected::before {
   content: "";
@@ -525,4 +530,53 @@ img {
   font-size: 16px;
   line-height: 100%;
   color: #121212;
+}
+
+.main-nav {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  border-top: 1px solid #121212;
+  border-bottom: 1px solid #121212;
+  background-color: #ffd209;
+}
+@media (max-width: 1024px) {
+  .main-nav {
+    top: 65px;
+  }
+}
+.main-nav .container {
+  display: flex;
+  align-items: center;
+  max-width: 1440px;
+  padding: 0;
+  overflow: auto;
+}
+.main-nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 15%;
+  padding: 12px 24px;
+  box-sizing: border-box;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: capitalize;
+  text-align: center;
+  white-space: nowrap;
+  color: #121212;
+  border-right: 1px solid #121212;
+}
+@media (max-width: 1024px) {
+  .main-nav-link {
+    flex: 0 0 220px;
+    padding: 9px 24px;
+    font-size: 14px;
+  }
+}
+.main-nav-link:last-child {
+  border-right: none;
 }

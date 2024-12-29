@@ -1,0 +1,49 @@
+.main-nav {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  border-top: 1px solid #121212;
+  border-bottom: 1px solid #121212;
+  background-color: #ffd209;
+
+  @include laptop {
+    top: 65px;
+  }
+
+  & .container {
+    display: flex;
+    align-items: center;
+    max-width: 1440px;
+    padding: 0;
+    overflow: auto;
+  }
+
+  &-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 0 15%;
+    padding: 12px 24px;
+    box-sizing: border-box;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    text-transform: capitalize;
+    text-align: center;
+    white-space: nowrap;
+    color: #121212;
+    border-right: 1px solid #121212;
+
+    @include laptop {
+      flex: 0 0 220px;
+      padding: 9px 24px;
+      font-size: 14px;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
