@@ -1,0 +1,125 @@
+.advantages {
+  padding: 60px 0 92px;
+  background: url(../assets/advantages-bg.webp) center repeat-x;
+  background-size: auto 100%;
+  border: 3px solid #000000;
+
+  @include laptop {
+    padding: 40px 0;
+  }
+
+  &__date {
+    margin: 0 0 48px;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-weight: 500;
+    font-size: 54px;
+    line-height: 100%;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: #9747ff;
+    text-shadow: 3px 3px 0 #000000;
+  }
+
+  &__content {
+    display: flex;
+    gap: 56px;
+
+    @include desktop {
+      gap: 24px;
+    }
+
+    @include laptop {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    @include mobile {
+      gap: 60px;
+    }
+  }
+
+  &__card {
+    display: block;
+    flex: 0 0 calc(100% / 3 - 56px / 3 * 2);
+    padding: 34px;
+    aspect-ratio: 1 / 1;
+    box-sizing: border-box;
+    background: url(../assets/advantages-card-bg.svg) center / cover no-repeat;
+
+    @include desktop {
+      flex: 0 0 calc(100% / 3 - 24px / 3 * 2);
+    }
+
+    @include laptop {
+      flex: 0 0 calc(100% / 2 - 24px / 2);
+      min-width: 360px;
+      max-width: 480px;
+      width: 100%;
+    }
+
+    @include mobile {
+      flex: 1 1 100%;
+      max-width: 420px;
+      min-width: auto;
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      border: 2px solid #000000;
+      background-color: #9747ff;
+
+      @include desktop {
+        justify-content: center;
+        padding: 14px 20px;
+      }
+    }
+
+    &-number {
+      margin-top: 16px;
+      font-family: 'Pixelify Sans', sans-serif;
+      font-weight: 700;
+      font-size: 120px;
+      line-height: 120%;
+      text-transform: capitalize;
+      text-align: center;
+      color: #ffd209;
+      text-shadow: 5px 5px 0 #000;
+
+      @include desktop {
+        margin-top: 0;
+        font-size: 84px;
+      }
+
+      @include laptop {
+        font-size: 110px;
+      }
+
+      @include mobilesm {
+        font-size: 72px;
+      }
+    }
+
+    &-text {
+      font-family: 'Pixelify Sans', sans-serif;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 120%;
+      letter-spacing: 0.03em;
+      text-transform: capitalize;
+      text-align: center;
+      color: #ffd209;
+
+      @include desktop {
+        font-size: 22px;
+      }
+
+      @include mobilesm {
+        font-size: 20px;
+      }
+    }
+  }
+}

@@ -1,6 +1,11 @@
 .discount {
   padding: 30px 0;
+  background: url(../assets/discont-bg.svg) center / 170% no-repeat;
   background-color: #000000;
+
+  @include desktop {
+    background-size: 140%;
+  }
 
   & .container {
     display: flex;
