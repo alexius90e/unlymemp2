@@ -184,7 +184,7 @@ img {
 }
 
 .header {
-  position: absolute;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -533,19 +533,9 @@ img {
 }
 
 .main-nav {
-  position: absolute;
-  top: 90px;
-  left: 0;
-  right: 0;
-  z-index: 100;
   border-top: 1px solid #121212;
   border-bottom: 1px solid #121212;
   background-color: #ffd209;
-}
-@media (max-width: 1024px) {
-  .main-nav {
-    top: 65px;
-  }
 }
 .main-nav .container {
   display: flex;
@@ -579,4 +569,106 @@ img {
 }
 .main-nav-link:last-child {
   border-right: none;
+}
+
+.first-screen {
+  padding: 56px 0 80px;
+  background-color: #ffd209;
+}
+@media (max-width: 768px) {
+  .first-screen {
+    padding: 22px 0 56px;
+  }
+}
+.first-screen .container {
+  display: flex;
+  align-items: center;
+  gap: 40px 32px;
+}
+@media (max-width: 768px) {
+  .first-screen .container {
+    flex-wrap: wrap;
+  }
+}
+.first-screen__content {
+  flex: 1 1 auto;
+}
+@media (max-width: 768px) {
+  .first-screen__content {
+    flex: 1 1 100%;
+    order: 1;
+  }
+}
+.first-screen__title {
+  margin: 0 0 40px;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 130%;
+  text-transform: capitalize;
+  color: #000;
+}
+@media (max-width: 1200px) {
+  .first-screen__title {
+    font-size: 48px;
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 1024px) {
+  .first-screen__title {
+    font-size: 38px;
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .first-screen__title {
+    font-size: 32px;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .first-screen__start {
+    display: flex;
+    justify-content: center;
+  }
+}
+.first-screen__start-button {
+  padding: 18px 60px;
+}
+@media (max-width: 768px) {
+  .first-screen__start-button {
+    max-width: 480px;
+    width: 100%;
+  }
+}
+.first-screen__figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 440px;
+}
+@media (max-width: 1200px) {
+  .first-screen__figure {
+    flex: 0 0 380px;
+  }
+}
+@media (max-width: 1024px) {
+  .first-screen__figure {
+    flex: 0 0 320px;
+  }
+}
+@media (max-width: 768px) {
+  .first-screen__figure {
+    flex: 1 1 100%;
+    order: 0;
+  }
+}
+.first-screen__figure-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .first-screen__figure-image {
+    width: 72%;
+  }
 }

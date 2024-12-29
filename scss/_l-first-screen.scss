@@ -1,0 +1,97 @@
+.first-screen {
+  padding: 56px 0 80px;
+  background-color: #ffd209;
+
+  @include tablet {
+    padding: 22px 0 56px;
+  }
+
+  & .container {
+    display: flex;
+    align-items: center;
+    gap: 40px 32px;
+
+    @include tablet {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__content {
+    flex: 1 1 auto;
+
+    @include tablet {
+      flex: 1 1 100%;
+      order: 1;
+    }
+  }
+
+  &__title {
+    margin: 0 0 40px;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 130%;
+    text-transform: capitalize;
+    color: #000;
+
+    @include desktop {
+      font-size: 48px;
+      margin-bottom: 32px;
+    }
+
+    @include laptop {
+      font-size: 38px;
+      margin-bottom: 24px;
+    }
+
+    @include tablet {
+      font-size: 32px;
+      text-align: center;
+    }
+  }
+
+  &__start {
+    @include tablet {
+      display: flex;
+      justify-content: center;
+    }
+
+    &-button {
+      padding: 18px 60px;
+
+      @include tablet {
+        max-width: 480px;
+        width: 100%;
+      }
+    }
+  }
+
+  &__figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 440px;
+
+    @include desktop {
+      flex: 0 0 380px;
+    }
+
+    @include laptop {
+      flex: 0 0 320px;
+    }
+
+    @include tablet {
+      flex: 1 1 100%;
+      order: 0;
+    }
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+
+      @include tablet {
+        width: 72%;
+      }
+    }
+  }
+}
