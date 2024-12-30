@@ -2,7 +2,8 @@
   padding: 60px 0 92px;
   background: url(../assets/advantages-bg.webp) center repeat-x;
   background-size: auto 100%;
-  border: 3px solid #000000;
+  border-top: 3px solid #000000;
+  border-bottom: 3px solid #000000;
 
   @include laptop {
     padding: 40px 0;

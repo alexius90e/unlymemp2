@@ -1,8 +1,13 @@
 .wordpressai {
+  border-bottom: 2px solid #000;
+  background: url(../assets/wordpess-bg.svg) top center / 48px repeat;
+  background-color: #ffd209;
+
   &__heading {
     padding: 32px 0 24px;
     border-bottom: 2px solid #000;
     border-top: 2px solid #000;
+    background-color: #ffffff;
 
     & .container {
       display: flex;
@@ -74,6 +79,85 @@
           width: 100%;
         }
       }
+    }
+  }
+
+  &__content {
+    padding: 48px 0;
+
+    @include laptop {
+      padding: 64px 0 40px;
+    }
+
+    & .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+
+      @include laptop {
+        gap: 16px;
+      }
+
+      @include mobile {
+        gap: 32px;
+      }
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 calc(100% / 3 - 24px / 3 * 2);
+    padding: 20px 20px 24px;
+    box-sizing: border-box;
+    border: 1px solid #121212;
+    background: #ffffff;
+    box-shadow: 6px 6px 0 0 #000000;
+
+    @include laptop {
+      flex: 0 0 calc(100% / 2 - 24px / 2);
+    }
+
+    @include mobile {
+      flex: 1 1 100%;
+    }
+
+    &-figure {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex: 1 1 auto;
+      margin: 0 0 10px;
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        width: 100px;
+        height: auto;
+
+        @include laptop {
+          width: 90px;
+        }
+      }
+    }
+
+    &-title {
+      margin: 0 0 10px;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 120%;
+      text-align: center;
+      color: #000;
+    }
+
+    &-text {
+      flex: 1 1 auto;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.8);
     }
   }
 }

@@ -785,7 +785,8 @@ img {
   padding: 60px 0 92px;
   background: url(../assets/advantages-bg.webp) center repeat-x;
   background-size: auto 100%;
-  border: 3px solid #000000;
+  border-top: 3px solid #000000;
+  border-bottom: 3px solid #000000;
 }
 @media (max-width: 1024px) {
   .advantages {
@@ -1280,10 +1281,16 @@ img {
   text-transform: capitalize;
 }
 
+.wordpressai {
+  border-bottom: 2px solid #000;
+  background: url(../assets/wordpess-bg.svg) top center/48px repeat;
+  background-color: #ffd209;
+}
 .wordpressai__heading {
   padding: 32px 0 24px;
   border-bottom: 2px solid #000;
   border-top: 2px solid #000;
+  background-color: #ffffff;
 }
 .wordpressai__heading .container {
   display: flex;
@@ -1360,4 +1367,82 @@ img {
     padding: 14px 40px;
     width: 100%;
   }
+}
+.wordpressai__content {
+  padding: 48px 0;
+}
+@media (max-width: 1024px) {
+  .wordpressai__content {
+    padding: 64px 0 40px;
+  }
+}
+.wordpressai__content .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+@media (max-width: 1024px) {
+  .wordpressai__content .container {
+    gap: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .wordpressai__content .container {
+    gap: 32px;
+  }
+}
+.wordpressai__card {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 calc(33.3333333333% - 16px);
+  padding: 20px 20px 24px;
+  box-sizing: border-box;
+  border: 1px solid #121212;
+  background: #ffffff;
+  box-shadow: 6px 6px 0 0 #000000;
+}
+@media (max-width: 1024px) {
+  .wordpressai__card {
+    flex: 0 0 calc(50% - 12px);
+  }
+}
+@media (max-width: 576px) {
+  .wordpressai__card {
+    flex: 1 1 100%;
+  }
+}
+.wordpressai__card-figure {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex: 1 1 auto;
+  margin: 0 0 10px;
+}
+.wordpressai__card-figure-image {
+  display: block;
+  max-width: 100%;
+  width: 100px;
+  height: auto;
+}
+@media (max-width: 1024px) {
+  .wordpressai__card-figure-image {
+    width: 90px;
+  }
+}
+.wordpressai__card-title {
+  margin: 0 0 10px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+  color: #000;
+}
+.wordpressai__card-text {
+  flex: 1 1 auto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.8);
 }
