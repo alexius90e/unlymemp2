@@ -9,6 +9,8 @@
     max-width: 1440px;
     padding: 0;
     overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #ffd209 #000000;
   }
 
   &-link {
