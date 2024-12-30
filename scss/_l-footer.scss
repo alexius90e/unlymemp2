@@ -1,2 +1,74 @@
 .footer {
+  padding: 40px 0;
+  background-color: #000000;
+
+  & .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 356px;
+    gap: 10px;
+
+    @include tablet {
+      flex: 0 1 auto;
+    }
+
+    &-item {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 150%;
+      color: #fff;
+
+      @include tablet {
+        font-size: 18px;
+        text-align: center;
+      }
+    }
+  }
+
+  &__logos {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    gap: 40px;
+
+    &-item {
+      &-image {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex: 0 0 auto;
+    gap: 16px;
+
+    @include tablet {
+      flex: 0 1 auto;
+    }
+
+    &-link {
+      display: inline-block;
+      flex: 0 0 auto;
+      width: 48px;
+      aspect-ratio: 1 / 1;
+
+      &_linkedin {
+        background-image: url(../assets/linkedin.svg);
+      }
+    }
+  }
 }

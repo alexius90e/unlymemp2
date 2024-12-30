@@ -1603,3 +1603,72 @@ img {
   padding: 15px 24px;
   transform: translateY(-50%);
 }
+
+.footer {
+  padding: 40px 0;
+  background-color: #000000;
+}
+.footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+@media (max-width: 768px) {
+  .footer .container {
+    flex-direction: column;
+  }
+}
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 356px;
+  gap: 10px;
+}
+@media (max-width: 768px) {
+  .footer__info {
+    flex: 0 1 auto;
+  }
+}
+.footer__info-item {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .footer__info-item {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+.footer__logos {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: 40px;
+}
+.footer__logos-item-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.footer__social {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 16px;
+}
+@media (max-width: 768px) {
+  .footer__social {
+    flex: 0 1 auto;
+  }
+}
+.footer__social-link {
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 48px;
+  aspect-ratio: 1/1;
+}
+.footer__social-link_linkedin {
+  background-image: url(../assets/linkedin.svg);
+}
