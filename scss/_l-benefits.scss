@@ -162,7 +162,6 @@
 
     &-info {
       position: relative;
-      flex: 1 1 auto;
       margin: 24px 0 0;
       padding: 10px 24px 10px 48px;
       border: 1px solid #000000;
@@ -253,6 +252,10 @@
       &::before {
         background-color: #ffd209;
       }
+    }
+
+    &_start &-info {
+      flex: 1 1 auto;
     }
 
     &_secure &-info {

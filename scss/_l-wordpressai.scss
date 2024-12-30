@@ -1,0 +1,79 @@
+.wordpressai {
+  &__heading {
+    padding: 32px 0 24px;
+    border-bottom: 2px solid #000;
+    border-top: 2px solid #000;
+
+    & .container {
+      display: flex;
+      align-items: center;
+      gap: 34px;
+
+      @include laptop {
+        gap: 21px;
+      }
+
+      @include tablet {
+        flex-wrap: wrap;
+      }
+
+      &::before {
+        content: '';
+        display: block;
+        width: 96px;
+        aspect-ratio: 1 / 1;
+        background: url(../assets/wordpress.svg) center / cover no-repeat;
+
+        @include laptop {
+          width: 80px;
+        }
+
+        @include mobile {
+          width: 64px;
+        }
+      }
+    }
+
+    &-title {
+      flex: 0 1 420px;
+      margin: 0;
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 130%;
+      text-transform: capitalize;
+      color: #000;
+
+      @include laptop {
+        font-size: 32px;
+      }
+
+      @include tablet {
+        flex: 1 1 calc(100% - 120px);
+      }
+
+      @include mobile {
+        font-size: 24px;
+      }
+    }
+
+    &-start {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex: 1 0 auto;
+
+      @include tablet {
+        flex: 1 1 100%;
+      }
+
+      & .button {
+        padding: 22px 40px;
+
+        @include tablet {
+          padding: 14px 40px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
