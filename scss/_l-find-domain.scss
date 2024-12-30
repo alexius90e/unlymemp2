@@ -7,6 +7,14 @@
     border: 2px solid #121212;
     background-color: #ffffff;
 
+    @include laptop {
+      padding: 24px;
+    }
+
+    @include mobile {
+      padding: 16px 16px 47px;
+    }
+
     &::after {
       content: '';
       position: absolute;
@@ -25,12 +33,23 @@
     display: flex;
     align-items: center;
     gap: 34px;
+    margin: 0 0 40px;
     max-width: 728px;
     font-weight: 700;
     font-size: 30px;
     line-height: 130%;
     text-transform: capitalize;
     color: #000;
+
+    @include laptop {
+      gap: 21px;
+      margin: 0 0 24px;
+      font-size: 24px;
+    }
+
+    @include mobile {
+      font-size: 16px;
+    }
 
     &::before {
       content: '';
@@ -39,6 +58,14 @@
       width: 100px;
       aspect-ratio: 1 / 1;
       background: url(../assets/globe.svg) center / cover no-repeat;
+
+      @include laptop {
+        width: 80px;
+      }
+
+      @include mobile {
+        width: 62px;
+      }
     }
   }
 
@@ -56,6 +83,11 @@
       &::-webkit-search-cancel-button {
         -webkit-appearance: none;
       }
+
+      @include mobile {
+        padding: 17px 20px;
+        margin-bottom: 16px;
+      }
     }
 
     &-submit {
@@ -65,6 +97,14 @@
       min-width: auto;
       padding: 15px 24px;
       transform: translateY(-50%);
+
+      @include mobile {
+        position: static;
+        width: 100%;
+        padding: 11px 24px;
+
+        transform: none;
+      }
     }
   }
 }

@@ -1550,6 +1550,16 @@ img {
   border: 2px solid #121212;
   background-color: #ffffff;
 }
+@media (max-width: 1024px) {
+  .find-domain__wrapper {
+    padding: 24px;
+  }
+}
+@media (max-width: 576px) {
+  .find-domain__wrapper {
+    padding: 16px 16px 47px;
+  }
+}
 .find-domain__wrapper::after {
   content: "";
   position: absolute;
@@ -1566,12 +1576,25 @@ img {
   display: flex;
   align-items: center;
   gap: 34px;
+  margin: 0 0 40px;
   max-width: 728px;
   font-weight: 700;
   font-size: 30px;
   line-height: 130%;
   text-transform: capitalize;
   color: #000;
+}
+@media (max-width: 1024px) {
+  .find-domain__title {
+    gap: 21px;
+    margin: 0 0 24px;
+    font-size: 24px;
+  }
+}
+@media (max-width: 576px) {
+  .find-domain__title {
+    font-size: 16px;
+  }
 }
 .find-domain__title::before {
   content: "";
@@ -1580,6 +1603,16 @@ img {
   width: 100px;
   aspect-ratio: 1/1;
   background: url(../assets/globe.svg) center/cover no-repeat;
+}
+@media (max-width: 1024px) {
+  .find-domain__title::before {
+    width: 80px;
+  }
+}
+@media (max-width: 576px) {
+  .find-domain__title::before {
+    width: 62px;
+  }
 }
 .find-domain__form {
   position: relative;
@@ -1595,6 +1628,12 @@ img {
 .find-domain__form-input::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
+@media (max-width: 576px) {
+  .find-domain__form-input {
+    padding: 17px 20px;
+    margin-bottom: 16px;
+  }
+}
 .find-domain__form-submit {
   position: absolute;
   top: 50%;
@@ -1602,6 +1641,14 @@ img {
   min-width: auto;
   padding: 15px 24px;
   transform: translateY(-50%);
+}
+@media (max-width: 576px) {
+  .find-domain__form-submit {
+    position: static;
+    width: 100%;
+    padding: 11px 24px;
+    transform: none;
+  }
 }
 
 .footer {
