@@ -1,0 +1,70 @@
+.find-domain {
+  padding: 60px 0 128px;
+
+  &__wrapper {
+    position: relative;
+    padding: 30px;
+    border: 2px solid #121212;
+    background-color: #ffffff;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      border: 2px solid #000000;
+      background-color: #ffd209;
+    }
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    max-width: 728px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 130%;
+    text-transform: capitalize;
+    color: #000;
+
+    &::before {
+      content: '';
+      flex: 0 0 auto;
+      display: block;
+      width: 100px;
+      aspect-ratio: 1 / 1;
+      background: url(../assets/globe.svg) center / cover no-repeat;
+    }
+  }
+
+  &__form {
+    position: relative;
+
+    &-input {
+      display: inline-block;
+      width: 100%;
+      padding: 30px 140px 30px 33px;
+      box-sizing: border-box;
+      border: 1px solid #000;
+      background-color: #fff5c4;
+
+      &::-webkit-search-cancel-button {
+        -webkit-appearance: none;
+      }
+    }
+
+    &-submit {
+      position: absolute;
+      top: 50%;
+      right: 22px;
+      min-width: auto;
+      padding: 15px 24px;
+      transform: translateY(-50%);
+    }
+  }
+}
