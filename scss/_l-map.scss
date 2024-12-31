@@ -9,6 +9,7 @@
 
 .map {
   padding: 120px 0 4px;
+  overflow: hidden;
 
   @include laptop {
     padding-top: 60px;
@@ -35,6 +36,8 @@
   }
 
   &__wrapper {
+    position: relative;
+
     @include laptop {
       margin-bottom: 60px;
     }
@@ -43,6 +46,137 @@
       display: block;
       max-width: 100%;
       height: auto;
+    }
+  }
+
+  &__tooltip {
+    position: absolute;
+    min-width: 282px;
+    max-width: 360px;
+    width: 100%;
+    opacity: 0;
+    transform: translate3d(-50%, -100%, 0);
+    filter: drop-shadow(5px 5px 0 #000000);
+    transition: opacity ease-in-out 0.3s;
+
+    @include desktop {
+      min-width: 240px;
+      max-width: 320px;
+    }
+    @include laptop {
+      min-width: 200px;
+      max-width: 280px;
+      filter: drop-shadow(3px 3px 0 #000000);
+    }
+
+    @include tablet {
+      min-width: 160px;
+      max-width: 230px;
+    }
+
+    @include mobile {
+      min-width: 136px;
+      max-width: 160px;
+    }
+
+    &.active {
+      opacity: 1;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 27px;
+      margin: 0 auto;
+      aspect-ratio: 27 / 13;
+      background: url(../assets/arrow-tail.svg) center / cover no-repeat;
+
+      @include laptop {
+        width: 23px;
+      }
+
+      @include mobile {
+        width: 18px;
+      }
+    }
+
+    &-content {
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 10px 20px rgba($color: #000000, $alpha: 0.2);
+
+      @include laptop {
+        padding: 16px;
+        box-shadow: 0 5px 10px rgba($color: #000000, $alpha: 0.2);
+      }
+
+      @include mobile {
+        padding: 10px;
+      }
+    }
+
+    &-country {
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 150%;
+      text-align: center;
+      color: #000;
+
+      @include desktop {
+        font-size: 32px;
+      }
+      @include laptop {
+        font-size: 24px;
+      }
+
+      @include tablet {
+        font-size: 20px;
+      }
+
+      @include mobile {
+        font-size: 18px;
+      }
+    }
+
+    &-location {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      & > li {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 120%;
+        text-align: center;
+        color: #000;
+
+        @include desktop {
+          font-size: 16px;
+        }
+        @include laptop {
+          font-size: 14px;
+        }
+
+        @include tablet {
+          font-size: 12px;
+        }
+
+        @include mobile {
+          font-size: 9px;
+        }
+      }
+    }
+  }
+
+  &__country {
+    transition: fill ease-in-out 0.3s;
+
+    &.active {
+      fill: #ffd209;
     }
   }
 
