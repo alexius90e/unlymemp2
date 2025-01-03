@@ -87,7 +87,7 @@
       content: '';
       display: block;
       width: 27px;
-      margin: 0 auto;
+      margin: -1px auto 0;
       aspect-ratio: 27 / 13;
       background: url(../assets/arrow-tail.svg) center / cover no-repeat;
 
@@ -178,18 +178,33 @@
     &.active {
       fill: #ffd209;
     }
+
+    &:hover {
+      fill: #ffd209;
+      
+    }
   }
 
   &__ticker {
     background: #000000;
     max-width: 100vw;
+    max-height: 20px;
     overflow: hidden;
+
+    @include laptop {
+      max-height: 18px;
+    }
 
     &-in {
       display: flex;
+      margin-top: -2px;
       width: fit-content;
-      animation: ticker 10s linear infinite;
+      animation: ticker 14s linear infinite;
       -webkit-transform-style: preserve-3d;
+
+      @include laptop {
+        margin-top: -1px;
+      }
     }
 
     &-item {
@@ -221,7 +236,7 @@
         background-color: #ffffff;
 
         @include laptop {
-          width: 17px;
+          width: 18px;
         }
       }
     }

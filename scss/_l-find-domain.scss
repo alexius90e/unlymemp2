@@ -6,6 +6,7 @@
     padding: 30px;
     border: 2px solid #121212;
     background-color: #ffffff;
+    transition: background-color ease-in-out 0.2s;
 
     @include laptop {
       padding: 24px;
@@ -13,6 +14,10 @@
 
     @include mobile {
       padding: 16px 16px 47px;
+    }
+
+    &:hover {
+      background-color: #ffd209;
     }
 
     &::after {
@@ -26,6 +31,11 @@
       box-sizing: border-box;
       border: 2px solid #000000;
       background-color: #ffd209;
+      transition: background-color ease-in-out 0.2s;
+    }
+
+    &:hover::after {
+      background-color: #000000;
     }
   }
 
@@ -77,16 +87,32 @@
       width: 100%;
       padding: 30px 140px 30px 33px;
       box-sizing: border-box;
-      border: 1px solid #000;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 120%;
+      color: #000000;
+      border: 1px solid #000000;
+      border-radius: 0px;
       background-color: #fff5c4;
+      transition: background-color ease-in-out 0.2s;
 
-      &::-webkit-search-cancel-button {
-        -webkit-appearance: none;
+      @include laptop {
+        font-size: 16px;
       }
 
       @include mobile {
         padding: 17px 20px;
         margin-bottom: 16px;
+        font-size: 12px;
+        border-radius: 0px;
+      }
+
+      &::placeholder {
+        color: #000000;
+      }
+
+      &::-webkit-search-cancel-button {
+        -webkit-appearance: none;
       }
     }
 
@@ -105,6 +131,12 @@
 
         transform: none;
       }
+    }
+  }
+
+  &__wrapper:hover &__form {
+    &-input {
+      background-color: #ffffff;
     }
   }
 }
