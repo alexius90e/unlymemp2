@@ -1111,7 +1111,6 @@ img {
   display: block;
   flex: 0 0 calc(33.3333333333% - 37.3333333333px);
   padding: 34px;
-  aspect-ratio: 1/1;
   box-sizing: border-box;
   background: url(../assets/advantages-card-bg.svg) center/cover no-repeat;
 }
@@ -1134,6 +1133,16 @@ img {
     max-width: 420px;
     min-width: auto;
   }
+}
+.advantages__card::before {
+  float: left;
+  padding-top: 100%;
+  content: "";
+}
+.advantages__card::after {
+  display: block;
+  content: "";
+  clear: both;
 }
 .advantages__card-content {
   display: flex;

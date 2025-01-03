@@ -43,7 +43,6 @@
     display: block;
     flex: 0 0 calc(100% / 3 - 56px / 3 * 2);
     padding: 34px;
-    aspect-ratio: 1 / 1;
     box-sizing: border-box;
     background: url(../assets/advantages-card-bg.svg) center / cover no-repeat;
 
@@ -62,6 +61,18 @@
       flex: 1 1 100%;
       max-width: 420px;
       min-width: auto;
+    }
+
+    &::before {
+      float: left;
+      padding-top: 100%;
+      content: "";
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      clear: both;
     }
 
     &-content {
