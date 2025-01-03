@@ -80,6 +80,9 @@
     }
 
     &-number {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
       margin-top: 16px;
       font-family: 'Pixelify Sans', sans-serif;
       font-weight: 700;

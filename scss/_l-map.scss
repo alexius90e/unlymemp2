@@ -174,6 +174,7 @@
 
   &__country {
     transition: fill ease-in-out 0.3s;
+    cursor: pointer;
 
     &.active {
       fill: #ffd209;
@@ -181,7 +182,6 @@
 
     &:hover {
       fill: #ffd209;
-      
     }
   }
 

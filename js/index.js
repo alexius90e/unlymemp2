@@ -53,3 +53,40 @@ function updateDate() {
 updateDate();
 
 setInterval(() => updateDate(), 1000);
+
+// counters
+
+const advantagesElem = document.querySelector('.advantages');
+
+let isCounterUpdated = false;
+
+if (advantagesElem) {
+  window.addEventListener('scroll', () => {
+    const isOverAdvantagesElem = window.scrollY >= advantagesElem.offsetTop - 200;
+    const counterClassName = 'advantages__card-number-value';
+    if (isOverAdvantagesElem && !isCounterUpdated) {
+      updateCounters(counterClassName);
+      isCounterUpdated = true;
+    }
+  });
+}
+
+function updateCounters(counterClassName) {
+  const advantagesCardNumberValueElems = document.querySelectorAll(`.${counterClassName}`);
+
+  advantagesCardNumberValueElems.forEach((counter) => {
+    const counterLimit = Number(counter.dataset.limit) * 10;
+    const step = counterLimit / 100;
+
+    let counts = setInterval(updateCounter, 10);
+    let upto = 0;
+
+    function updateCounter() {
+      upto += step;
+      counter.innerHTML = Math.round(upto) / 10;
+      if (upto >= counterLimit) {
+        clearInterval(counts);
+      }
+    }
+  });
+}
