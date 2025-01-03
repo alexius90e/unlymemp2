@@ -333,14 +333,28 @@ const countries = [
 const mapWidth = 1280;
 const mapHeight = 584;
 
+const mapElem = document.querySelector('.map');
 const mapCountryElems = document.querySelectorAll('.map__country');
 
 const mapTooltip = document.querySelector('.map__tooltip');
 const mapTooltipCountry = document.querySelector('.map__tooltip-country');
 const mapTooltipLocation = document.querySelector('.map__tooltip-location');
 
-const interval = setInterval(() => {
+let mapIntervalId = createMapInterval();
+let mapClearTimeoutId = null;
+
+function createMapInterval() {
   const country = countries[Math.floor(Math.random() * countries.length)];
+  updateTooltip(country);
+  return setInterval(() => {
+    const country = countries[Math.floor(Math.random() * countries.length)];
+    resetTooltip();
+    updateTooltip(country);
+    mapClearTimeoutId = setTimeout(() => resetTooltip(), 2700);
+  }, 3000);
+}
+
+function updateTooltip(country) {
   const countryElem = document.querySelector(`.map__country[data-country="${country.id}"]`);
   const coordX = country.coordinates.x / mapWidth;
   const coordY = country.coordinates.y / mapHeight;
@@ -360,11 +374,26 @@ const interval = setInterval(() => {
     mapTooltip.style.top = `${coordY * 100}%`;
     mapTooltip.classList.add('active');
   }
+}
 
-  setTimeout(() => {
-    if (mapTooltip) {
-      mapTooltip.classList.remove('active');
-      mapCountryElems.forEach((element) => element.classList.remove('active'));
+function resetTooltip() {
+  if (!mapTooltip) return;
+  mapTooltip.classList.remove('active');
+  mapCountryElems.forEach((element) => element.classList.remove('active'));
+}
+
+mapCountryElems.forEach((mapCountryElem) => {
+  mapCountryElem.addEventListener('click', (event) => {
+    const country = countries.find((item) => item.id === event.currentTarget.dataset.country);
+    window.clearInterval(mapIntervalId);
+    window.clearTimeout(mapClearTimeoutId);
+    resetTooltip();
+    if (country) {
+      updateTooltip(country);
+      setTimeout(() => {
+        resetTooltip();
+        mapIntervalId = createMapInterval();
+      }, 5000);
     }
-  }, 2700);
-}, 3000);
+  });
+});
