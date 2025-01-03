@@ -192,7 +192,7 @@
     overflow: hidden;
 
     @include laptop {
-      max-height: 18px;
+      max-height: 16px;
     }
 
     &-in {
@@ -224,7 +224,7 @@
       @include laptop {
         gap: 13px;
         padding-right: 13px;
-        font-size: 25px;
+        font-size: 23px;
       }
 
       &::after {
@@ -236,7 +236,7 @@
         background-color: #ffffff;
 
         @include laptop {
-          width: 18px;
+          width: 16px;
         }
       }
     }

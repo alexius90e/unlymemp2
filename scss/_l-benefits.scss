@@ -284,10 +284,7 @@
     &_scale:hover &-info,
     &_secure:hover &-info {
       background-color: #fff5c4;
-
-
     }
-
 
     &_start &-info {
       flex: 1 1 auto;
@@ -393,10 +390,12 @@
 
           @include laptop {
             width: 18px;
+            background-size: 18px;
             box-shadow: 1px 1px 0 #000000;
           }
 
           @include mobile {
+            background-size: 16px;
             width: 16px;
           }
         }

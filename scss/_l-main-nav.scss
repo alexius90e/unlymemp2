@@ -16,8 +16,12 @@
     max-width: 1440px;
     padding: 0;
     overflow: auto;
-    scrollbar-width: thin;
+    scrollbar-width: none;
     scrollbar-color: #ffd209 #000000;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   &-link {

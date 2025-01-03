@@ -385,8 +385,10 @@ function resetTooltip() {
 mapCountryElems.forEach((mapCountryElem) => {
   mapCountryElem.addEventListener('click', (event) => {
     const country = countries.find((item) => item.id === event.currentTarget.dataset.country);
-    window.clearInterval(mapIntervalId);
-    window.clearTimeout(mapClearTimeoutId);
+    clearInterval(mapIntervalId);
+    clearTimeout(mapClearTimeoutId);
+    mapIntervalId = null;
+    mapClearTimeoutId = null;
     resetTooltip();
     if (country) {
       updateTooltip(country);

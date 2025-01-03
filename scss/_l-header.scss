@@ -186,14 +186,19 @@
       min-height: 40px;
       padding: 10px 0;
       box-sizing: border-box;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 120%;
+      text-align: center;
+      color: #121212;
       user-select: none;
       cursor: pointer;
 
       &::after {
         content: '';
         display: block;
+        height: 10px;
         width: 10px;
-        aspect-ratio: 1 / 1;
         background: url(../assets/dropdown.svg) center / cover no-repeat;
         transition: transform ease-in-out 0.2s;
       }
@@ -281,8 +286,6 @@
 
     &-currency {
       flex: 0 0 auto;
-
-      
 
       & .select-items {
         @include laptop {
