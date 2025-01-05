@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unlyme Cloud</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script type="module" src="./js/index.js" defer></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="header__burger">
+            <button class="header__burger-button">
+              <span class="header__burger-button-line"></span>
+            </button>
+          </div>
+
+          <div class="header__left">
+            <div class="header__unlymeos">
+              <button class="header__unlymeos-button button button_primary">Go to Unlyme OS</button>
+            </div>
+
+            <div class="header__info">
+              <div class="header__info-title">Information</div>
+
+              <ul class="header__info-menu">
+                <li class="header__info-menu-item">
+                  <a class="header__info-menu-item-link" href="#">Link 01</a>
+                </li>
+                <li class="header__info-menu-item">
+                  <a class="header__info-menu-item-link" href="#">Link 02</a>
+                </li>
+                <li class="header__info-menu-item">
+                  <a class="header__info-menu-item-link" href="#">Link 03</a>
+                </li>
+                <li class="header__info-menu-item">
+                  <a class="header__info-menu-item-link" href="#">Link 04</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="header__logo">
+            <a class="header__logo-link" href="./">
+              <img class="header__logo-link-image" src="./assets/logo.svg" alt="logo" />
+            </a>
+          </div>
+
+          <div class="header__right">
+            <div class="header__controls">
+              <div class="header__controls-currency custom-select" data-value="USD">
+                <select id="currency" name="currency">
+                  <option value="USD">USD $</option>
+                  <option value="EUR">EUR €</option>
+                  <option value="CHF">CHF CHF</option>
+                </select>
+              </div>
+
+              <div class="header__controls-lang custom-select" data-value="1">
+                <select id="lang" name="lang">
+                  <option value="0">EN</option>
+                  <option value="1">IT</option>
+                  <option value="2">NL</option>
+                  <option value="3">العربية</option>
+                  <option value="4">FR</option>
+                  <option value="5">ES</option>
+                  <option value="6">DA</option>
+                  <option value="7">中文</option>
+                  <option value="8">DE</option>
+                  <option value="9">PT</option>
+                  <option value="10">TR</option>
+                  <option value="11">日本語</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="header__auth">
+              <button class="header__auth-button"></button>
+
+              <button class="button button_primary">Log In</button>
+              <button class="button button_secondary">Sign Up</button>
+            </div>
+          </div>
+
+          <div class="header__menu">
+            <div class="header__menu-auth">
+              <button class="button button_primary">Log In</button>
+              <button class="button button_secondary">Sign Up</button>
+            </div>
+
+            <div class="header__unlymeos">
+              <button class="header__unlymeos-button button button_primary">Go to Unlyme OS</button>
+            </div>
+
+            <nav class="header__menu-nav">
+              <a class="header__menu-nav-link" href="#">Link 01</a>
+              <a class="header__menu-nav-link" href="#">Link 02</a>
+              <a class="header__menu-nav-link" href="#">Link 03</a>
+              <a class="header__menu-nav-link" href="#">Link 04</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="main-nav">
+      <div class="container">
+        <a class="main-nav-link" href="#">Web hosting</a>
+        <a class="main-nav-link" href="#">Virtual Server(VPS/VDS)</a>
+        <a class="main-nav-link" href="#">domains</a>
+        <a class="main-nav-link" href="#">SS Certificates</a>
+        <a class="main-nav-link" href="#">DNS hosting</a>
+        <a class="main-nav-link" href="#">VPN</a>
+      </div>
+    </nav>
+
+    <main class="main">
+      <section class="web-hosting">
+        <div class="web-hosting__types">
+          <div class="web-hosting__types-content">
+            <button class="web-hosting__types-button active">Premium Hosting</button>
+            <button class="web-hosting__types-button">Cloud Hosting</button>
+            <button class="web-hosting__types-button">Free Hositng</button>
+          </div>
+        </div>
+
+        <div class="web-hosting__main">
+          <div class="container">
+            <div class="web-hosting__heading">
+              <div class="web-hosting__heading-content">
+                <h2 class="web-hosting__heading-title">Premium web hosting</h2>
+                <div class="web-hosting__heading-description">
+                  Powerful and secure hosting for your project.
+                </div>
+              </div>
+
+              <div class="web-hosting__heading-switch">
+                <button class="web-hosting__heading-switch-button active">Monthly</button>
+                <button class="web-hosting__heading-switch-button">Yearly</button>
+              </div>
+            </div>
+
+            <div class="web-hosting__locations">
+              <button class="web-hosting__locations-button button button_secondary active">
+                <img
+                  class="web-hosting__locations-button-icon"
+                  src="./assets/switzerland-flag.svg"
+                  alt="flag"
+                />
+                <span class="web-hosting__locations-button-text">Switzerland</span>
+              </button>
+              <button class="web-hosting__locations-button button button_secondary">
+                <img
+                  class="web-hosting__locations-button-icon"
+                  src="./assets/france-flag.svg"
+                  alt="flag"
+                />
+                <span class="web-hosting__locations-button-text">France</span>
+              </button>
+              <button class="web-hosting__locations-button button button_secondary">
+                <img
+                  class="web-hosting__locations-button-icon"
+                  src="./assets/germany-flag.svg"
+                  alt="flag"
+                />
+                <span class="web-hosting__locations-button-text">Germany</span>
+              </button>
+              <button class="web-hosting__locations-button button button_secondary">
+                <img
+                  class="web-hosting__locations-button-icon"
+                  src="./assets/italy-flag.svg"
+                  alt="flag"
+                />
+                <span class="web-hosting__locations-button-text">Italy</span>
+              </button>
+              <button class="web-hosting__locations-button button button_secondary">
+                <img
+                  class="web-hosting__locations-button-icon"
+                  src="./assets/uk-flag.svg"
+                  alt="flag"
+                />
+                <span class="web-hosting__locations-button-text">United Kingdom</span>
+              </button>
+            </div>
+
+            <div class="web-hosting__plans">
+              <div class="web-hosting__plan">
+                <div class="web-hosting__plan-info">
+                  <h4 class="web-hosting__plan-info-title">Growth</h4>
+                  <p class="web-hosting__plan-info-description">
+                    Everything you could possibly need to build a modern website.
+                  </p>
+                  <div class="web-hosting__plan-info-price">
+                    <span class="web-hosting__plan-info-price-value">9.86 €</span>
+                    <span class="web-hosting__plan-info-price-period">/Month</span>
+                  </div>
+                  <div class="web-hosting__plan-info-discount">
+                    Choose a 12-month plan and save 75%. 29.67 € / year
+                  </div>
+                </div>
+
+                <div class="web-hosting__plan-signup">
+                  <button class="web-hosting__plan-signup-button button button_primary">
+                    Sign Up
+                  </button>
+                </div>
+
+                <div class="web-hosting__plan-features">
+                  <ul class="web-hosting__plan-features-list">
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">100 websites</div>
+                      <div class="web-hosting__plan-features-list-item-info">
+                        The maximum amount of website allowed per account.
+                      </div>
+                    </li>
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">
+                        100 GB SSD storage
+                      </div>
+                    </li>
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">
+                        ~25,000 visits monthly
+                      </div>
+                    </li>
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">
+                        400,000 files and directories (inodes)
+                      </div>
+                      <div class="web-hosting__plan-features-list-item-info">
+                        The maximum amount of website allowed per account.
+                      </div>
+                    </li>
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">
+                        Free automatic website migration
+                      </div>
+                    </li>
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">
+                        Unlimited free SSL
+                      </div>
+                    </li>
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">Free email</div>
+                    </li>
+                  </ul>
+
+                  <h4 class="web-hosting__plan-features-title">Not included</h4>
+
+                  <ul
+                    class="web-hosting__plan-features-list web-hosting__plan-features-list_not-included"
+                  >
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">Free CDN</div>
+                    </li>
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">
+                        WordPress AI tools
+                      </div>
+                    </li>
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">
+                        Dedicated IP address
+                      </div>
+                    </li>
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">Priority support</div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="web-hosting__plan-see-all">
+                  <button class="web-hosting__plan-see-all-button">See all features</button>
+                </div>
+              </div>
+
+              <div class="web-hosting__plan web-hosting__plan_popular">
+                <div class="web-hosting__plan-tag">Most Popular</div>
+
+                <div class="web-hosting__plan-info">
+                  <h4 class="web-hosting__plan-info-title">Business</h4>
+                  <p class="web-hosting__plan-info-description">
+                    More resources and enhanced capabilities.
+                  </p>
+                  <div class="web-hosting__plan-info-price">
+                    <span class="web-hosting__plan-info-price-value">12.72 €</span>
+                    <span class="web-hosting__plan-info-price-period">/Month</span>
+                  </div>
+                  <div class="web-hosting__plan-info-discount">
+                    Choose a 12-month plan and save 74%. 39.21 € / year
+                  </div>
+                </div>
+
+                <div class="web-hosting__plan-signup">
+                  <button class="web-hosting__plan-signup-button button button_primary">
+                    Sign Up
+                  </button>
+                </div>
+
+                <div class="web-hosting__plan-features">
+                  <ul class="web-hosting__plan-features-list">
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">100 websites</div>
+                      <div class="web-hosting__plan-features-list-item-info">
+                        The maximum amount of website allowed per account.
+                      </div>
+                    </li>
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">
+                        200 GB NVMe storage
+                      </div>
+                    </li>
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">
+                        ~100,000 visits monthly
+                      </div>
+                      <div class="web-hosting__plan-features-list-item-info">
+                        The maximum amount of website allowed per account.
+                      </div>
+                    </li>
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">
+                        600,000 files and directories (inodes)
+                      </div>
+                    </li>
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">
+                        Free automatic website migration
+                      </div>
+                    </li>
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">
+                        Unlimited free SSL
+                      </div>
+                    </li>
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">Free email</div>
+                    </li>
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">
+                        Daily and on-demand backups
+                      </div>
+                    </li>
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">
+                        WordPress vulnerabilities scanner
+                      </div>
+                    </li>
+                  </ul>
+
+                  <h4 class="web-hosting__plan-features-title">Not included</h4>
+
+                  <ul
+                    class="web-hosting__plan-features-list web-hosting__plan-features-list_not-included"
+                  >
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">
+                        Dedicated IP address
+                      </div>
+                    </li>
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">Priority support</div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="web-hosting__plan-see-all">
+                  <button class="web-hosting__plan-see-all-button">See all features</button>
+                </div>
+              </div>
+
+              <div class="web-hosting__plan">
+                <div class="web-hosting__plan-info">
+                  <h4 class="web-hosting__plan-info-title">Advanced</h4>
+                  <p class="web-hosting__plan-info-description">
+                    Powerful resources and high performance.
+                  </p>
+                  <div class="web-hosting__plan-info-price">
+                    <span class="web-hosting__plan-info-price-value">20.62 €</span>
+                    <span class="web-hosting__plan-info-price-period">/Month</span>
+                  </div>
+                  <div class="web-hosting__plan-info-discount">
+                    Choose a 12-month plan and save 60%. 98.95 € / year
+                  </div>
+                </div>
+
+                <div class="web-hosting__plan-signup">
+                  <button class="web-hosting__plan-signup-button button button_primary">
+                    Sign Up
+                  </button>
+                </div>
+
+                <div class="web-hosting__plan-features">
+                  <ul class="web-hosting__plan-features-list">
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">100 websites</div>
+                      <div class="web-hosting__plan-features-list-item-info">
+                        The maximum amount of website allowed per account.
+                      </div>
+                    </li>
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">
+                        200 GB NVMe storage
+                      </div>
+                    </li>
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">
+                        ~200,000 visits monthly
+                      </div>
+                      <div class="web-hosting__plan-features-list-item-info">
+                        The maximum amount of website allowed per account.
+                      </div>
+                    </li>
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">
+                        2,000,000 files and directories (inodes)
+                      </div>
+                    </li>
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">
+                        Free pre-built templates
+                      </div>
+                    </li>
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">
+                        Free automatic website migration
+                      </div>
+                    </li>
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">Unlimited free SSL</div>
+                    </li>
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">Free email</div>
+                    </li>
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">
+                        Daily and on-demand backups
+                      </div>
+                    </li>
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">
+                        WordPress vulnerabilities scanner
+                      </div>
+                    </li>
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">
+                        WordPress auto updates
+                      </div>
+                    </li>
+                    <li class="web-hosting__plan-features-list-item">
+                      <div class="web-hosting__plan-features-list-item-text">
+                        WordPress auto updates
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="web-hosting__plan-see-all">
+                  <button class="web-hosting__plan-see-all-button">See all features</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__info">
+          <div class="footer__info-item">2024 © Unlyme SA</div>
+          <div class="footer__info-item">Rue Saint-Martin 7, 1003 Lausanne, Switzerland</div>
+        </div>
+
+        <div class="footer__logos">
+          <div class="footer__logos-item">
+            <img class="footer__logos-item-image" src="./assets/innovaud.svg" alt="innovaud" />
+          </div>
+          <div class="footer__logos-item">
+            <img class="footer__logos-item-image" src="./assets/sge.svg" alt="sge" />
+          </div>
+        </div>
+
+        <div class="footer__social">
+          <a class="footer__social-link footer__social-link_linkedin" href="#"></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

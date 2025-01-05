@@ -90,3 +90,38 @@ function updateCounters(counterClassName) {
     }
   });
 }
+
+///
+
+const webHostingTypesButtons = document.querySelectorAll('.web-hosting__types-button');
+
+webHostingTypesButtons.forEach((button) => {
+  button.addEventListener('click', (event) => {
+    webHostingTypesButtons.forEach((button) => {
+      button.classList.remove('active');
+    });
+    event.currentTarget.classList.add('active');
+  });
+});
+
+const webHostingSwitchButtons = document.querySelectorAll('.web-hosting__heading-switch-button');
+
+webHostingSwitchButtons.forEach((button) => {
+  button.addEventListener('click', (event) => {
+    webHostingSwitchButtons.forEach((button) => {
+      button.classList.remove('active');
+    });
+    event.currentTarget.classList.add('active');
+  });
+});
+
+const webHostingLocationsButtons = document.querySelectorAll('.web-hosting__locations-button');
+
+webHostingLocationsButtons.forEach((button) => {
+  button.addEventListener('click', (event) => {
+    webHostingLocationsButtons.forEach((button) => {
+      button.classList.remove('active');
+    });
+    event.currentTarget.classList.add('active');
+  });
+});
