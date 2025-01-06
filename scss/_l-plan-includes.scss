@@ -1,0 +1,134 @@
+.plan-includes {
+  margin: 0 0 160px;
+
+  @include laptop {
+    margin: 0 0 100px;
+  }
+
+  &__heading {
+    padding: 34px 0;
+    border-bottom: 2px solid #000000;
+    border-top: 2px solid #000000;
+
+    @include mobile {
+      padding: 24px 0 34px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 130%;
+    text-transform: capitalize;
+    color: #000;
+
+    @include laptop {
+      font-size: 36px;
+    }
+
+    @include mobile {
+      font-size: 32px;
+    }
+  }
+
+  &__main {
+    padding: 60px 0 55px;
+    border-bottom: 2px solid #000000;
+    background: url(../assets/cross-bg.svg) center / 1421px repeat;
+    background-color: #ffd209;
+
+    &-wrapper {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    &-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 0 0 calc(100% / 4 - 30px / 4 * 3);
+      gap: 20px;
+      min-height: 200px;
+      padding: 25px 20px;
+      box-sizing: border-box;
+      border: 2px solid #121212;
+      background-color: #ffffff;
+      box-shadow: 6px 6px 0 #000;
+
+      @include laptop {
+        flex: 0 0 calc(100% / 3 - 30px / 3 * 2);
+      }
+
+      @include tablet {
+        flex: 0 0 calc(100% / 2 - 30px / 2);
+        order: 0;
+      }
+
+      @include mobile {
+        flex: 0 0 100%;
+      }
+
+      @include mobilesm {
+        flex: 0 1 280px;
+      }
+
+      &_wordpress {
+        align-items: center;
+        flex-direction: row;
+        flex: 0 0 calc(100% / 2 - 30px / 2);
+
+        @include laptop {
+          order: 10;
+        }
+
+        @include tablet {
+          flex: 0 0 100%;
+          order: 0;
+        }
+
+        @include mobile {
+          align-items: center;
+          flex-direction: column;
+        }
+
+        @include mobilesm {
+          flex: 0 1 280px;
+        }
+      }
+
+      &-figure {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+
+        &-image {
+          display: block;
+          max-width: 100%;
+          width: auto;
+          height: 80px;
+          object-fit: cover;
+        }
+      }
+
+      &-text {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 120%;
+        text-align: center;
+        color: #000;
+      }
+
+      &_wordpress &-text {
+        text-align: left;
+
+        @include mobile {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

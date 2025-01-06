@@ -39,6 +39,7 @@
     white-space: nowrap;
     color: #121212;
     border-right: 1px solid #121212;
+    transition: all ease-in-out 0.2s;
 
     @include laptop {
       flex: 0 0 220px;
@@ -46,8 +47,19 @@
       font-size: 14px;
     }
 
+    &:hover {
+      text-decoration-line: underline;
+      text-decoration-style: dotted;
+      text-underline-offset: 6px;
+    }
+
     &:last-child {
       border-right: none;
+    }
+
+    &.active {
+      color: #ffffff;
+      background-color: #000000;
     }
   }
 }

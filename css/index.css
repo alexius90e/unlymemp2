@@ -598,6 +598,7 @@ img {
   white-space: nowrap;
   color: #121212;
   border-right: 1px solid #121212;
+  transition: all ease-in-out 0.2s;
 }
 @media (max-width: 1024px) {
   .main-nav-link {
@@ -606,8 +607,17 @@ img {
     font-size: 14px;
   }
 }
+.main-nav-link:hover {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 6px;
+}
 .main-nav-link:last-child {
   border-right: none;
+}
+.main-nav-link.active {
+  color: #ffffff;
+  background-color: #000000;
 }
 
 .first-screen {
@@ -1192,7 +1202,7 @@ img {
     font-size: 110px;
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 400px) {
   .advantages__card-number {
     font-size: 72px;
   }
@@ -1212,7 +1222,7 @@ img {
     font-size: 22px;
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 400px) {
   .advantages__card-text {
     font-size: 20px;
   }
@@ -2364,6 +2374,145 @@ img {
   width: 20px;
   height: 20px;
   background: url(../assets/dropdown2.svg) center/cover no-repeat;
+}
+
+.plan-includes {
+  margin: 0 0 160px;
+}
+@media (max-width: 1024px) {
+  .plan-includes {
+    margin: 0 0 100px;
+  }
+}
+.plan-includes__heading {
+  padding: 34px 0;
+  border-bottom: 2px solid #000000;
+  border-top: 2px solid #000000;
+}
+@media (max-width: 576px) {
+  .plan-includes__heading {
+    padding: 24px 0 34px;
+  }
+}
+.plan-includes__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 130%;
+  text-transform: capitalize;
+  color: #000;
+}
+@media (max-width: 1024px) {
+  .plan-includes__title {
+    font-size: 36px;
+  }
+}
+@media (max-width: 576px) {
+  .plan-includes__title {
+    font-size: 32px;
+  }
+}
+.plan-includes__main {
+  padding: 60px 0 55px;
+  border-bottom: 2px solid #000000;
+  background: url(../assets/cross-bg.svg) center/1421px repeat;
+  background-color: #ffd209;
+}
+.plan-includes__main-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.plan-includes__main-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 0 0 calc(25% - 22.5px);
+  gap: 20px;
+  min-height: 200px;
+  padding: 25px 20px;
+  box-sizing: border-box;
+  border: 2px solid #121212;
+  background-color: #ffffff;
+  box-shadow: 6px 6px 0 #000;
+}
+@media (max-width: 1024px) {
+  .plan-includes__main-card {
+    flex: 0 0 calc(33.3333333333% - 20px);
+  }
+}
+@media (max-width: 768px) {
+  .plan-includes__main-card {
+    flex: 0 0 calc(50% - 15px);
+    order: 0;
+  }
+}
+@media (max-width: 576px) {
+  .plan-includes__main-card {
+    flex: 0 0 100%;
+  }
+}
+@media (max-width: 400px) {
+  .plan-includes__main-card {
+    flex: 0 1 280px;
+  }
+}
+.plan-includes__main-card_wordpress {
+  align-items: center;
+  flex-direction: row;
+  flex: 0 0 calc(50% - 15px);
+}
+@media (max-width: 1024px) {
+  .plan-includes__main-card_wordpress {
+    order: 10;
+  }
+}
+@media (max-width: 768px) {
+  .plan-includes__main-card_wordpress {
+    flex: 0 0 100%;
+    order: 0;
+  }
+}
+@media (max-width: 576px) {
+  .plan-includes__main-card_wordpress {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media (max-width: 400px) {
+  .plan-includes__main-card_wordpress {
+    flex: 0 1 280px;
+  }
+}
+.plan-includes__main-card-figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+.plan-includes__main-card-figure-image {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.plan-includes__main-card-text {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+  color: #000;
+}
+.plan-includes__main-card_wordpress .plan-includes__main-card-text {
+  text-align: left;
+}
+@media (max-width: 576px) {
+  .plan-includes__main-card_wordpress .plan-includes__main-card-text {
+    text-align: center;
+  }
 }
 
 .footer {
