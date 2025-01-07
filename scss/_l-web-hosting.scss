@@ -32,8 +32,8 @@
       font-size: 14px;
       line-height: 100%;
       text-align: center;
-      color: rgba(255, 255, 255, 0.6);
-      border: 1px solid rgba(255, 255, 255, 0.6);
+      color: #ffffff;
+      border: 1px solid #ffffff;
       background-color: #000000;
       transition-property: color, border-color, background-color;
       transition-timing-function: ease-in-out;
@@ -87,12 +87,7 @@
 
     &-content {
       flex: 0 1 auto;
-      padding-left: 28px;
       box-sizing: border-box;
-
-      @include desktop {
-        padding: 0;
-      }
     }
 
     &-title {
@@ -101,7 +96,7 @@
       font-size: 60px;
       line-height: 130%;
       text-transform: capitalize;
-      color: #000;
+      color: #000000;
 
       @include laptop {
         font-size: 40px;
@@ -117,7 +112,7 @@
       font-weight: 400;
       font-size: 20px;
       line-height: 140%;
-      color: rgba(0, 0, 0, 0.8);
+      color: #000000;
 
       @include laptop {
         font-size: 16px;
@@ -201,7 +196,20 @@
       gap: 10px;
       flex: 0 0 auto;
       min-width: auto;
-      padding: 8px 14px;
+      min-height: 40px;
+      padding: 7px 14px;
+
+      &_hidden {
+        @include laptop {
+          display: none;
+        }
+
+        .shown & {
+          @include laptop {
+            display: flex;
+          }
+        }
+      }
 
       &.active {
         background-color: #ffd209;
@@ -215,6 +223,53 @@
         height: 24px;
         border-radius: 24px;
         object-fit: cover;
+      }
+    }
+
+    &-show {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 40px;
+      padding: 7px 14px;
+      display: none;
+
+      @include laptop {
+        display: flex;
+      }
+
+      &::after {
+        content: '';
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: url(../assets/dropdown2.svg) center / 12px no-repeat;
+        transition: transform ease-in-out 0.2s;
+      }
+
+      .shown &::after {
+        transform: rotate(180deg);
+      }
+
+      &-more,
+      &-less {
+        pointer-events: none;
+      }
+
+      &-more {
+        display: inline-block;
+
+        .shown & {
+          display: none;
+        }
+      }
+
+      &-less {
+        display: none;
+
+        .shown & {
+          display: inline-block;
+        }
       }
     }
   }
@@ -293,7 +348,7 @@
         font-size: 24px;
         line-height: 130%;
         text-transform: capitalize;
-        color: #000;
+        color: #000000;
       }
 
       &-description {
@@ -311,7 +366,7 @@
           font-size: 40px;
           line-height: 130%;
           text-transform: capitalize;
-          color: #000;
+          color: #000000;
         }
 
         &-period {
@@ -377,6 +432,27 @@
             box-shadow: 2px 2px 0 #000000;
           }
 
+          &.active {
+            &::after {
+              content: '';
+              position: fixed;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              z-index: 10;
+              display: block;
+            }
+          }
+
+          &_hidden {
+            display: none;
+
+            .shown & {
+              display: flex;
+            }
+          }
+
           &-text {
             font-weight: 500;
             font-size: 16px;
@@ -394,9 +470,9 @@
 
           &-info {
             position: absolute;
-            top: calc(100% - 14px);
+            top: 21px;
             left: 30px;
-            z-index: 10;
+            z-index: 20;
             display: block;
             max-width: calc(100% - 36px);
             width: 250px;
@@ -415,6 +491,16 @@
           }
 
           &:hover &-info {
+            pointer-events: none;
+            opacity: 1;
+
+            @include laptop {
+              pointer-events: none;
+              opacity: 0;
+            }
+          }
+
+          &.active &-info {
             pointer-events: none;
             opacity: 1;
           }
@@ -452,7 +538,7 @@
         font-weight: 600;
         font-size: 18px;
         line-height: 120%;
-        color: #000;
+        color: #000000;
         border: none;
         border-bottom: 3px solid #000000;
         background-color: #ffffff;
@@ -464,6 +550,36 @@
           width: 20px;
           height: 20px;
           background: url(../assets/dropdown2.svg) center / cover no-repeat;
+          transition-property: transform;
+          transition-timing-function: ease-in-out;
+          transition-duration: 0.2s;
+        }
+
+        .shown & {
+          &::after {
+            transform: rotate(180deg);
+          }
+        }
+
+        &-more,
+        &-less {
+          pointer-events: none;
+        }
+
+        &-more {
+          display: inline-block;
+
+          .shown & {
+            display: none;
+          }
+        }
+
+        &-less {
+          display: none;
+
+          .shown & {
+            display: inline-block;
+          }
         }
       }
     }

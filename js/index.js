@@ -125,3 +125,46 @@ webHostingLocationsButtons.forEach((button) => {
     event.currentTarget.classList.add('active');
   });
 });
+
+///
+
+const webHostFeatureItemName = 'web-hosting__plan-features-list-item';
+const webHostFeatureItems = document.querySelectorAll(`
+  .${webHostFeatureItemName}:has(.${webHostFeatureItemName}-info)
+`);
+
+webHostFeatureItems.forEach((item) =>
+  item.addEventListener('click', (event) => {
+    const isLayout = event.target === event.currentTarget;
+    const isTitle = event.target.classList.contains(`${webHostFeatureItemName}-text`);
+
+    if (isTitle) {
+      event.currentTarget.classList.add('active');
+    }
+
+    if (isLayout) {
+      event.currentTarget.classList.remove('active');
+    }
+  })
+);
+
+const webHostPlans = document.querySelectorAll('.web-hosting__plan');
+
+webHostPlans.forEach((plan) => {
+  plan.addEventListener('click', (event) => {
+    const isSeeAllBtn = event.target.classList.contains('web-hosting__plan-see-all-button');
+
+    if (isSeeAllBtn) {
+      event.currentTarget.classList.toggle('shown');
+    }
+  });
+});
+
+const webHostLocations = document.querySelector('.web-hosting__locations');
+const webHostLocationsShowButton = document.querySelector('.web-hosting__locations-show');
+
+if (webHostLocations && webHostLocationsShowButton) {
+  webHostLocationsShowButton.addEventListener('click', (event) => {
+    webHostLocations.classList.toggle('shown');
+  });
+}
