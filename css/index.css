@@ -47,17 +47,17 @@ img {
   text-align: center;
   color: #121212;
   border: 1px solid #121212;
-  box-shadow: 5px 5px 0 #000;
-  transition-property: background-color, box-shadow;
+  filter: drop-shadow(5px 5px 0 #000000);
+  transition-property: background-color, filter;
   transition-timing-function: ease-in-out;
   transition-duration: 0.2s;
   cursor: pointer;
 }
 .button:hover {
-  box-shadow: 1px 1px 0 #000;
+  filter: drop-shadow(2px 2px 0 #000000);
 }
 .button:active {
-  box-shadow: 0px 0px 0 #000;
+  filter: drop-shadow(1px 1px 0 #000000);
 }
 .button_primary {
   background-color: #ffd209;
