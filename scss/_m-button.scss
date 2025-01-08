@@ -13,11 +13,10 @@
   color: #121212;
   border: 1px solid #121212;
   -webkit-appearance: none;
-  -webkit-box-shadow: 5px 5px 0 #000000;
-  box-shadow: 5px 5px 0 #000000;
-  transition-property: background-color, box-shadow;
-  transition-timing-function: ease-in-out;
-  transition-duration: 0.2s;
+  -webkit-box-shadow: 4px 4px 0 #000000;
+  box-shadow: 4px 4px 0 #000000;
+  outline: none;
+  transition: background-color ease-in-out 0.1s, box-shadow ease-in-out 0.1s;
   cursor: pointer;
 
   &:hover {
