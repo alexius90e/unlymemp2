@@ -223,19 +223,20 @@
       transition: opacity ease-in-out 0.2s;
 
       &-item {
-        min-width: max-content;
-
         &-link {
-          display: inline-block;
+          display: block;
           min-width: 120px;
-          max-width: 240px;
+          max-width: 220px;
           width: 100%;
           border: 1px solid #121212;
           padding: 6px 14px;
           box-sizing: border-box;
+          overflow: hidden;
           font-weight: 400;
           font-size: 14px;
           line-height: 100%;
+          text-overflow: ellipsis;
+          white-space: nowrap;
           color: #121212;
           transition: background-color ease-in-out 0.2s;
 

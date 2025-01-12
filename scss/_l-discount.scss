@@ -35,8 +35,20 @@
         font-size: 28px;
       }
 
+      & a {
+        color: #fff;
+      }
+
       & > span {
         color: #ffd209;
+      }
+
+      & a {
+        color: #fff;
+
+        & > span {
+          color: #ffd209;
+        }
       }
     }
 

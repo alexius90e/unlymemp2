@@ -199,7 +199,8 @@
       display: flex;
       margin-top: -2px;
       width: fit-content;
-      animation: ticker 14s linear infinite;
+      animation: ticker 36s linear infinite;
+      transform-style: preserve-3d;
       -webkit-transform-style: preserve-3d;
 
       @include laptop {
@@ -219,6 +220,7 @@
       text-align: center;
       color: #fff;
       white-space: nowrap;
+      backface-visibility: hidden;
       -webkit-backface-visibility: hidden;
 
       @include laptop {
