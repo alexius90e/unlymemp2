@@ -1,0 +1,520 @@
+.domains {
+  padding: 80px 0 160px;
+
+  @include laptop {
+    padding: 50px 0 120px;
+  }
+
+  @include mobile {
+    padding: 30px 0 100px;
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 80px;
+
+    @include desktop {
+      gap: 40px;
+    }
+
+    @include laptop {
+      flex-wrap: wrap;
+      gap: 60px;
+    }
+  }
+
+  &__order {
+    display: block;
+    flex: 0 0 315px;
+    min-height: 200px;
+    padding: 24px;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    box-shadow: 8px 8px 0 0 #000;
+    background: #fff;
+
+    @include laptop {
+      flex: 1 1 100%;
+      order: 1;
+    }
+
+    &-title {
+      margin: 0 0 24px;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 130%;
+      text-transform: capitalize;
+      color: #000;
+    }
+
+    &-empty {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 150%;
+      color: #000;
+    }
+  }
+
+  &__main {
+    flex: 1 1 auto;
+
+    @include laptop {
+      order: 0;
+    }
+  }
+
+  &__search {
+    position: relative;
+    max-width: calc(100% - 16px);
+    margin: 0 0 56px;
+    padding: 24px 24px 40px;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    background-color: #fff;
+
+    @include laptop {
+      max-width: calc(100% - 10px);
+      margin: 0 0 34px;
+      padding: 16px 16px 40px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: -16px;
+      bottom: -16px;
+      z-index: -1;
+      display: block;
+      height: 100%;
+      width: 100%;
+      box-sizing: border-box;
+      border: 2px solid #000;
+      background-color: #ffd209;
+
+      @include laptop {
+        right: -10px;
+        bottom: -10px;
+      }
+    }
+
+    &-title {
+      margin: 0 0 24px;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 130%;
+      text-transform: capitalize;
+      color: #000;
+
+      @include laptop {
+        margin: 0 0 10px;
+        font-size: 24px;
+      }
+
+      @include mobile {
+        font-size: 20px;
+      }
+    }
+
+    &-description {
+      margin: 0 0 61px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: #000;
+
+      @include laptop {
+        margin: 0 0 24px;
+        font-size: 14px;
+      }
+    }
+
+    &-form {
+      position: relative;
+
+      &-input {
+        display: inline-block;
+        width: 100%;
+        padding: 33px 140px 32px 33px;
+        box-sizing: border-box;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 120%;
+        color: #000000;
+        border: 1px solid #000000;
+        border-radius: 0px;
+        outline: none;
+        background-color: #fff5c4;
+        transition: background-color ease-in-out 0.2s;
+
+        @include laptop {
+          font-size: 16px;
+        }
+
+        @include mobile {
+          padding: 17px 20px;
+          margin-bottom: 16px;
+          font-size: 12px;
+          border-radius: 0px;
+        }
+
+        &::placeholder {
+          color: #000000;
+        }
+
+        &::-webkit-search-cancel-button {
+          -webkit-appearance: none;
+        }
+      }
+
+      &-button {
+        position: absolute;
+        top: 50%;
+        right: 22px;
+        min-width: auto;
+        padding: 15px 24px;
+        transform: translateY(-50%);
+
+        @include mobile {
+          position: static;
+          width: 100%;
+          padding: 11px 24px;
+
+          transform: none;
+        }
+      }
+    }
+
+    &-results {
+      // display: none;
+      margin: 40px 0 24px;
+
+      &-top {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px 20px;
+        margin: 0 0 30px;
+
+        @include laptop {
+          margin: 0 0 20px;
+        }
+
+        &-title {
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 120%;
+          color: #000;
+
+          @include laptop {
+            font-size: 18px;
+          }
+        }
+
+        &-hideoccupied {
+          display: inline-block;
+          padding: 0;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 120%;
+          text-decoration: underline;
+          text-decoration-skip-ink: none;
+          color: rgba(0, 0, 0, 0.7);
+          border: none;
+          background: none;
+          cursor: pointer;
+
+          @include laptop {
+            font-size: 14px;
+          }
+
+          &-visible {
+            display: inline-block;
+          }
+
+          &-hidden {
+            display: none;
+          }
+        }
+      }
+
+      &.freeonly &-top {
+        &-hideoccupied {
+          &-visible {
+            display: none;
+          }
+
+          &-hidden {
+            display: inline-block;
+          }
+        }
+      }
+
+      &-heading,
+      &-list-item {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 120%;
+
+        @include laptop {
+          gap: 12px;
+        }
+
+        &-domain,
+        &-status,
+        &-price {
+          flex: 0 0 20%;
+
+          @include tablet {
+            flex: 0 0 calc(100% / 3 - 12px / 3 * 2);
+          }
+        }
+
+        &-domain {
+          @include mobile {
+            flex: 0 0 calc(100% - 152px);
+          }
+        }
+
+        &-status {
+          @include mobile {
+            flex: 0 0 64px;
+          }
+        }
+
+        &-price {
+          @include mobile {
+            flex: 0 0 64px;
+          }
+        }
+      }
+
+      &-heading {
+        padding: 11px 20px;
+        color: #fff;
+        border: 1px solid #000;
+        background: #000;
+      }
+
+      &-list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        &-item {
+          padding: 11px 20px;
+          color: #000000;
+          border: 1px solid #000;
+          border-top: none;
+          background-color: #ffffff;
+
+          @include laptop {
+            padding: 15px 16px;
+          }
+
+          @include tablet {
+            flex-wrap: wrap;
+          }
+
+          &-domain {
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          &.busy &-status {
+            opacity: 0.5;
+          }
+
+          &-price {
+            &-old {
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 120%;
+              text-decoration: line-through;
+              color: rgba(0, 0, 0, 0.5);
+            }
+          }
+
+          &.busy &-price {
+            &-old,
+            &-new {
+              display: none;
+            }
+
+            &::before {
+              content: '--';
+              display: inline-block;
+              width: 48px;
+              font-weight: 500;
+              font-size: 20px;
+              line-height: 120%;
+              text-align: center;
+              color: #000;
+            }
+          }
+
+          &-buttons {
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            gap: 10px;
+            flex: 1 0 auto;
+          }
+
+          &-whois,
+          &-addtocart,
+          &-inthecart {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 46px;
+            min-width: auto;
+            padding: 10px 16px;
+            box-sizing: border-box;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 100%;
+            text-transform: capitalize;
+            text-align: center;
+
+            @include tablet {
+              min-height: 30px;
+              width: 100%;
+              padding: 8px 16px;
+            }
+          }
+
+          &-whois {
+            display: none;
+          }
+
+          &-addtocart {
+            display: flex;
+          }
+
+          &-inthecart {
+            display: none;
+            color: #ffffff;
+            background-color: #000000;
+          }
+
+          &.busy &-addtocart,
+          &.busy &-inthecart {
+            display: none;
+          }
+
+          &.busy &-whois {
+            display: flex;
+          }
+
+          &.active &-addtocart,
+          &.active &-whois {
+            display: none;
+          }
+
+          &.active &-inthecart {
+            display: flex;
+          }
+        }
+      }
+
+      &.freeonly &-list-item.busy {
+        display: none;
+      }
+    }
+
+    &.search &-results {
+      display: block;
+    }
+  }
+
+  &__filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+
+    @include laptop {
+      gap: 15px;
+    }
+
+    &-checkbox {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex: 0 0 calc(100% / 3 - 32px / 3 * 2);
+      box-sizing: border-box;
+      padding: 14px 16px;
+      border: 1px solid #000;
+      box-shadow: 5px 5px 0 0 #000;
+      background: #fff;
+      cursor: pointer;
+
+      @include laptop {
+        flex: 0 0 calc(100% / 2 - 32px / 2);
+      }
+
+      @include mobile {
+        flex: 0 0 calc(100% / 2 - 16px / 2);
+        gap: 12px;
+      }
+
+      @include mobilesm {
+        flex: 1 1 100%;
+      }
+
+      &:has(&-input:checked) {
+        background: #ffd209;
+      }
+
+      &-input {
+        display: none;
+      }
+
+      &-price {
+        &-old {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 120%;
+          text-decoration: line-through;
+          color: rgba(0, 0, 0, 0.5);
+
+          @include laptop {
+            font-size: 12px;
+          }
+        }
+
+        &-new {
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 120%;
+          color: #000;
+
+          @include laptop {
+            font-size: 14px;
+          }
+        }
+      }
+
+      &-name {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        text-align: center;
+        color: #000;
+
+        @include laptop {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  &__main:has(&__search.search) &__filter {
+    display: none;
+  }
+}

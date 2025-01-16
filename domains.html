@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unlyme Cloud</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script type="module" src="./js/index.js" defer></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="header__burger">
+            <button class="header__burger-button">
+              <span class="header__burger-button-line"></span>
+            </button>
+          </div>
+
+          <div class="header__left">
+            <div class="header__unlymeos">
+              <button class="header__unlymeos-button button button_primary">Go to Unlyme OS</button>
+            </div>
+
+            <div class="header__info">
+              <div class="header__info-title">Information</div>
+
+              <ul class="header__info-menu">
+                <li class="header__info-menu-item">
+                  <a class="header__info-menu-item-link" href="#">Link 01</a>
+                </li>
+                <li class="header__info-menu-item">
+                  <a class="header__info-menu-item-link" href="#">Link 02</a>
+                </li>
+                <li class="header__info-menu-item">
+                  <a class="header__info-menu-item-link" href="#">Link 03</a>
+                </li>
+                <li class="header__info-menu-item">
+                  <a class="header__info-menu-item-link" href="#">Link 04</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="header__logo">
+            <a class="header__logo-link" href="./">
+              <img class="header__logo-link-image" src="./assets/logo.svg" alt="logo" />
+            </a>
+          </div>
+
+          <div class="header__right">
+            <div class="header__controls">
+              <div class="header__controls-currency custom-select" data-value="USD">
+                <select id="currency" name="currency">
+                  <option value="USD">USD $</option>
+                  <option value="EUR">EUR €</option>
+                  <option value="CHF">CHF CHF</option>
+                </select>
+              </div>
+
+              <div class="header__controls-lang custom-select" data-value="1">
+                <select id="lang" name="lang">
+                  <option value="0">EN</option>
+                  <option value="1">IT</option>
+                  <option value="2">NL</option>
+                  <option value="3">العربية</option>
+                  <option value="4">FR</option>
+                  <option value="5">ES</option>
+                  <option value="6">DA</option>
+                  <option value="7">中文</option>
+                  <option value="8">DE</option>
+                  <option value="9">PT</option>
+                  <option value="10">TR</option>
+                  <option value="11">日本語</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="header__auth">
+              <button class="header__auth-button"></button>
+
+              <button class="button button_primary">Log In</button>
+              <button class="button button_secondary">Sign Up</button>
+            </div>
+          </div>
+
+          <div class="header__menu">
+            <div class="header__menu-auth">
+              <button class="button button_primary">Log In</button>
+              <button class="button button_secondary">Sign Up</button>
+            </div>
+
+            <div class="header__unlymeos">
+              <button class="header__unlymeos-button button button_primary">Go to Unlyme OS</button>
+            </div>
+
+            <nav class="header__menu-nav">
+              <a class="header__menu-nav-link" href="#">Link 01</a>
+              <a class="header__menu-nav-link" href="#">Link 02</a>
+              <a class="header__menu-nav-link" href="#">Link 03</a>
+              <a class="header__menu-nav-link" href="#">Link 04</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="main-nav">
+      <div class="container">
+        <a class="main-nav-link" href="./hosting.html">Web hosting</a>
+        <a class="main-nav-link" href="#">Virtual Server(VPS/VDS)</a>
+        <a class="main-nav-link active" href="./domains.html">domains</a>
+        <a class="main-nav-link" href="#">SS Certificates</a>
+        <a class="main-nav-link" href="#">DNS hosting</a>
+        <a class="main-nav-link" href="./vpn.html">VPN</a>
+      </div>
+    </nav>
+
+    <main class="main">
+      <section class="domains">
+        <div class="container">
+          <div class="domains__content">
+            <div class="domains__order">
+              <h2 class="domains__order-title">Your order</h2>
+              <div class="domains__order-empty">
+                There are no services in your order yet. Start by choosing a domain.
+              </div>
+            </div>
+
+            <div class="domains__main">
+              <div class="domains__search">
+                <h2 class="domains__search-title">Search and buy a domain in minutes</h2>
+                <div class="domains__search-description">
+                  Register the perfect name for your website with our tool.
+                </div>
+
+                <form class="domains__search-form">
+                  <input
+                    class="domains__search-form-input"
+                    type="search"
+                    placeholder="Domain Name"
+                  />
+                  <button class="domains__search-form-button button button_primary">Check</button>
+                </form>
+
+                <div class="domains__search-results">
+                  <div class="domains__search-results-top">
+                    <span class="domains__search-results-top-title">Available Domains</span>
+                    <button class="domains__search-results-top-hideoccupied">
+                      <span class="domains__search-results-top-hideoccupied-visible">
+                        Hide occupied
+                      </span>
+                      <span class="domains__search-results-top-hideoccupied-hidden">
+                        Show occupied
+                      </span>
+                    </button>
+                  </div>
+
+                  <div class="domains__search-results-content">
+                    <div class="domains__search-results-heading">
+                      <div class="domains__search-results-heading-domain">Domain Name</div>
+                      <div class="domains__search-results-heading-status">Status</div>
+                      <div class="domains__search-results-heading-price">Price</div>
+                    </div>
+
+                    <ul class="domains__search-results-list">
+                      <li class="domains__search-results-list-item busy" id="googleCom1">
+                        <div class="domains__search-results-list-item-domain">Google.com</div>
+                        <div class="domains__search-results-list-item-status">Busy</div>
+                        <div class="domains__search-results-list-item-price">
+                          <div class="domains__search-results-list-item-price-old">$14.90</div>
+                          <div class="domains__search-results-list-item-price-new">$12.90</div>
+                        </div>
+                        <div class="domains__search-results-list-item-buttons">
+                          <button
+                            class="domains__search-results-list-item-whois button button_secondary"
+                          >
+                            Whois
+                          </button>
+                          <button
+                            class="domains__search-results-list-item-addtocart button button_primary"
+                          >
+                            Add To Cart
+                          </button>
+                          <span class="domains__search-results-list-item-inthecart">
+                            In the Cart
+                          </span>
+                        </div>
+                      </li>
+                      <li class="domains__search-results-list-item" id="googleCom2">
+                        <div class="domains__search-results-list-item-domain">Google.com</div>
+                        <div class="domains__search-results-list-item-status">Free</div>
+                        <div class="domains__search-results-list-item-price">
+                          <div class="domains__search-results-list-item-price-old">$14.90</div>
+                          <div class="domains__search-results-list-item-price-new">$12.90</div>
+                        </div>
+                        <div class="domains__search-results-list-item-buttons">
+                          <button
+                            class="domains__search-results-list-item-whois button button_secondary"
+                          >
+                            Whois
+                          </button>
+                          <button
+                            class="domains__search-results-list-item-addtocart button button_primary"
+                          >
+                            Add To Cart
+                          </button>
+                          <span class="domains__search-results-list-item-inthecart">
+                            In the Cart
+                          </span>
+                        </div>
+                      </li>
+                      <li class="domains__search-results-list-item" id="googleCom3">
+                        <div class="domains__search-results-list-item-domain">Google.com</div>
+                        <div class="domains__search-results-list-item-status">Free</div>
+                        <div class="domains__search-results-list-item-price">
+                          <div class="domains__search-results-list-item-price-old">$14.90</div>
+                          <div class="domains__search-results-list-item-price-new">$12.90</div>
+                        </div>
+                        <div class="domains__search-results-list-item-buttons">
+                          <button
+                            class="domains__search-results-list-item-whois button button_secondary"
+                          >
+                            Whois
+                          </button>
+                          <button
+                            class="domains__search-results-list-item-addtocart button button_primary"
+                          >
+                            Add To Cart
+                          </button>
+                          <span class="domains__search-results-list-item-inthecart">
+                            In the Cart
+                          </span>
+                        </div>
+                      </li>
+                      <li class="domains__search-results-list-item" id="googleCom4">
+                        <div class="domains__search-results-list-item-domain">Google.com</div>
+                        <div class="domains__search-results-list-item-status">Free</div>
+                        <div class="domains__search-results-list-item-price">
+                          <div class="domains__search-results-list-item-price-old">$14.90</div>
+                          <div class="domains__search-results-list-item-price-new">$12.90</div>
+                        </div>
+                        <div class="domains__search-results-list-item-buttons">
+                          <button
+                            class="domains__search-results-list-item-whois button button_secondary"
+                          >
+                            Whois
+                          </button>
+                          <button
+                            class="domains__search-results-list-item-addtocart button button_primary"
+                          >
+                            Add To Cart
+                          </button>
+                          <span class="domains__search-results-list-item-inthecart">
+                            In the Cart
+                          </span>
+                        </div>
+                      </li>
+                      <li class="domains__search-results-list-item" id="googleCom5">
+                        <div class="domains__search-results-list-item-domain">Google.com</div>
+                        <div class="domains__search-results-list-item-status">Free</div>
+                        <div class="domains__search-results-list-item-price">
+                          <div class="domains__search-results-list-item-price-old">$14.90</div>
+                          <div class="domains__search-results-list-item-price-new">$12.90</div>
+                        </div>
+                        <div class="domains__search-results-list-item-buttons">
+                          <button
+                            class="domains__search-results-list-item-whois button button_secondary"
+                          >
+                            Whois
+                          </button>
+                          <button
+                            class="domains__search-results-list-item-addtocart button button_primary"
+                          >
+                            Add To Cart
+                          </button>
+                          <span class="domains__search-results-list-item-inthecart">
+                            In the Cart
+                          </span>
+                        </div>
+                      </li>
+                      <li class="domains__search-results-list-item" id="googleCom6">
+                        <div class="domains__search-results-list-item-domain">Google.com</div>
+                        <div class="domains__search-results-list-item-status">Free</div>
+                        <div class="domains__search-results-list-item-price">
+                          <div class="domains__search-results-list-item-price-old">$14.90</div>
+                          <div class="domains__search-results-list-item-price-new">$12.90</div>
+                        </div>
+                        <div class="domains__search-results-list-item-buttons">
+                          <button
+                            class="domains__search-results-list-item-whois button button_secondary"
+                          >
+                            Whois
+                          </button>
+                          <button
+                            class="domains__search-results-list-item-addtocart button button_primary"
+                          >
+                            Add To Cart
+                          </button>
+                          <span class="domains__search-results-list-item-inthecart">
+                            In the Cart
+                          </span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="domains__filter">
+                <label class="domains__filter-checkbox">
+                  <input
+                    class="domains__filter-checkbox-input"
+                    type="checkbox"
+                    id="com"
+                    name="domain"
+                  />
+                  <div class="domains__filter-checkbox-price">
+                    <div class="domains__filter-checkbox-price-old">$14.90</div>
+                    <div class="domains__filter-checkbox-price-new">$12.90</div>
+                  </div>
+                  <div class="domains__filter-checkbox-name">.COM</div>
+                </label>
+
+                <label class="domains__filter-checkbox">
+                  <input
+                    class="domains__filter-checkbox-input"
+                    type="checkbox"
+                    id="eu"
+                    name="domain"
+                  />
+                  <div class="domains__filter-checkbox-price">
+                    <div class="domains__filter-checkbox-price-old">$14.90</div>
+                    <div class="domains__filter-checkbox-price-new">$12.90</div>
+                  </div>
+                  <div class="domains__filter-checkbox-name">.EU</div>
+                </label>
+
+                <label class="domains__filter-checkbox">
+                  <input
+                    class="domains__filter-checkbox-input"
+                    type="checkbox"
+                    id="online"
+                    name="domain"
+                  />
+                  <div class="domains__filter-checkbox-price">
+                    <div class="domains__filter-checkbox-price-old">$14.90</div>
+                    <div class="domains__filter-checkbox-price-new">$12.90</div>
+                  </div>
+                  <div class="domains__filter-checkbox-name">.ONLINE</div>
+                </label>
+
+                <label class="domains__filter-checkbox">
+                  <input
+                    class="domains__filter-checkbox-input"
+                    type="checkbox"
+                    id="dev"
+                    name="domain"
+                  />
+                  <div class="domains__filter-checkbox-price">
+                    <div class="domains__filter-checkbox-price-old">$14.90</div>
+                    <div class="domains__filter-checkbox-price-new">$12.90</div>
+                  </div>
+                  <div class="domains__filter-checkbox-name">.DEV</div>
+                </label>
+
+                <label class="domains__filter-checkbox">
+                  <input
+                    class="domains__filter-checkbox-input"
+                    type="checkbox"
+                    id="net"
+                    name="domain"
+                  />
+                  <div class="domains__filter-checkbox-price">
+                    <div class="domains__filter-checkbox-price-old">$14.90</div>
+                    <div class="domains__filter-checkbox-price-new">$12.90</div>
+                  </div>
+                  <div class="domains__filter-checkbox-name">.NET</div>
+                </label>
+
+                <label class="domains__filter-checkbox">
+                  <input
+                    class="domains__filter-checkbox-input"
+                    type="checkbox"
+                    id="tech"
+                    name="domain"
+                  />
+                  <div class="domains__filter-checkbox-price">
+                    <div class="domains__filter-checkbox-price-old">$14.90</div>
+                    <div class="domains__filter-checkbox-price-new">$12.90</div>
+                  </div>
+                  <div class="domains__filter-checkbox-name">.TECH</div>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__info">
+          <div class="footer__info-item">2024 © Unlyme SA</div>
+          <div class="footer__info-item">Rue Saint-Martin 7, 1003 Lausanne, Switzerland</div>
+        </div>
+
+        <div class="footer__logos">
+          <div class="footer__logos-item">
+            <img class="footer__logos-item-image" src="./assets/innovaud.svg" alt="innovaud" />
+          </div>
+          <div class="footer__logos-item">
+            <img class="footer__logos-item-image" src="./assets/sge.svg" alt="sge" />
+          </div>
+        </div>
+
+        <div class="footer__social">
+          <a class="footer__social-link footer__social-link_linkedin" href="#"></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

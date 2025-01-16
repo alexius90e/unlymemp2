@@ -1,5 +1,6 @@
 import './custom-select.js';
 import './map.js';
+import './domains.js';
 
 const headerBurgerButton = document.querySelector('.header__burger-button');
 const headerMenu = document.querySelector('.header__menu');
