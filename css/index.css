@@ -3607,6 +3607,187 @@ img {
           box-shadow: 2px 2px 0 #000000;
 }
 
+.vpn-advantages {
+  margin: 0 0 160px;
+}
+@media (max-width: 1024px) {
+  .vpn-advantages {
+    margin: 0 0 100px;
+  }
+}
+.vpn-advantages__heading {
+  padding: 34px 0;
+  border-bottom: 2px solid #000000;
+  border-top: 2px solid #000000;
+}
+@media (max-width: 576px) {
+  .vpn-advantages__heading {
+    padding: 24px 0 34px;
+  }
+}
+.vpn-advantages__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 130%;
+  text-transform: capitalize;
+  color: #000;
+}
+@media (max-width: 1024px) {
+  .vpn-advantages__title {
+    font-size: 36px;
+  }
+}
+@media (max-width: 576px) {
+  .vpn-advantages__title {
+    font-size: 32px;
+  }
+}
+.vpn-advantages__main {
+  padding: 60px 0 55px;
+  border-bottom: 2px solid #000000;
+  background: url(../assets/sun-bg.svg) center no-repeat;
+  background-size: auto 100%;
+  background-color: #ffd209;
+}
+.vpn-advantages__main-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+}
+@media (max-width: 400px) {
+  .vpn-advantages__main-wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.vpn-advantages__main-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(33.3333333333% - 20px);
+          flex: 0 0 calc(33.3333333333% - 20px);
+  gap: 20px;
+  min-height: 200px;
+  padding: 25px 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 2px solid #121212;
+  background-color: #ffffff;
+  -webkit-box-shadow: 6px 6px 0 #000;
+          box-shadow: 6px 6px 0 #000;
+}
+@media (max-width: 1024px) {
+  .vpn-advantages__main-card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% - 15px);
+            flex: 0 0 calc(50% - 15px);
+  }
+}
+@media (max-width: 576px) {
+  .vpn-advantages__main-card {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
+@media (max-width: 400px) {
+  .vpn-advantages__main-card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 280px;
+            flex: 0 1 280px;
+  }
+}
+.vpn-advantages__main-card_lg {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(50% - 15px);
+          flex: 0 0 calc(50% - 15px);
+}
+@media (max-width: 1024px) {
+  .vpn-advantages__main-card_lg {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
+@media (max-width: 576px) {
+  .vpn-advantages__main-card_lg {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media (max-width: 400px) {
+  .vpn-advantages__main-card_lg {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 280px;
+            flex: 0 1 280px;
+  }
+}
+.vpn-advantages__main-card-figure {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+.vpn-advantages__main-card-figure-image {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  height: 80px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.vpn-advantages__main-card-text {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+  color: #000;
+}
+.vpn-advantages__main-card_lg .vpn-advantages__main-card-text {
+  text-align: left;
+}
+@media (max-width: 576px) {
+  .vpn-advantages__main-card_lg .vpn-advantages__main-card-text {
+    text-align: center;
+  }
+}
+
 .footer {
   padding: 40px 0;
   background-color: #000000;
