@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unlyme Cloud</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script type="module" src="./js/index.js" defer></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="header__burger">
+            <button class="header__burger-button">
+              <span class="header__burger-button-line"></span>
+            </button>
+          </div>
+
+          <div class="header__left">
+            <div class="header__unlymeos">
+              <button class="header__unlymeos-button button button_primary">Go to Unlyme OS</button>
+            </div>
+
+            <div class="header__info">
+              <div class="header__info-title">Information</div>
+
+              <ul class="header__info-menu">
+                <li class="header__info-menu-item">
+                  <a class="header__info-menu-item-link" href="#">Link 01</a>
+                </li>
+                <li class="header__info-menu-item">
+                  <a class="header__info-menu-item-link" href="#">Link 02</a>
+                </li>
+                <li class="header__info-menu-item">
+                  <a class="header__info-menu-item-link" href="#">Link 03</a>
+                </li>
+                <li class="header__info-menu-item">
+                  <a class="header__info-menu-item-link" href="#">Link 04</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="header__logo">
+            <a class="header__logo-link" href="./">
+              <img class="header__logo-link-image" src="./assets/logo.svg" alt="logo" />
+            </a>
+          </div>
+
+          <div class="header__right">
+            <div class="header__controls">
+              <div class="header__controls-currency custom-select" data-value="USD">
+                <select id="currency" name="currency">
+                  <option value="USD">USD $</option>
+                  <option value="EUR">EUR €</option>
+                  <option value="CHF">CHF CHF</option>
+                </select>
+              </div>
+
+              <div class="header__controls-lang custom-select" data-value="1">
+                <select id="lang" name="lang">
+                  <option value="0">EN</option>
+                  <option value="1">IT</option>
+                  <option value="2">NL</option>
+                  <option value="3">العربية</option>
+                  <option value="4">FR</option>
+                  <option value="5">ES</option>
+                  <option value="6">DA</option>
+                  <option value="7">中文</option>
+                  <option value="8">DE</option>
+                  <option value="9">PT</option>
+                  <option value="10">TR</option>
+                  <option value="11">日本語</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="header__auth">
+              <button class="header__auth-button"></button>
+
+              <button class="button button_primary">Log In</button>
+              <button class="button button_secondary">Sign Up</button>
+            </div>
+          </div>
+
+          <div class="header__menu">
+            <div class="header__menu-auth">
+              <button class="button button_primary">Log In</button>
+              <button class="button button_secondary">Sign Up</button>
+            </div>
+
+            <div class="header__unlymeos">
+              <button class="header__unlymeos-button button button_primary">Go to Unlyme OS</button>
+            </div>
+
+            <nav class="header__menu-nav">
+              <a class="header__menu-nav-link" href="#">Link 01</a>
+              <a class="header__menu-nav-link" href="#">Link 02</a>
+              <a class="header__menu-nav-link" href="#">Link 03</a>
+              <a class="header__menu-nav-link" href="#">Link 04</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="main-nav">
+      <div class="container">
+        <a class="main-nav-link" href="./hosting.html">Web hosting</a>
+        <a class="main-nav-link" href="#">Virtual Server(VPS/VDS)</a>
+        <a class="main-nav-link" href="#">domains</a>
+        <a class="main-nav-link" href="#">SS Certificates</a>
+        <a class="main-nav-link" href="#">DNS hosting</a>
+        <a class="main-nav-link active" href="./vpn.html">VPN</a>
+      </div>
+    </nav>
+
+    <main class="main">
+      <section class="vpn">
+        <div class="container">
+          <div class="vpn__heading">
+            <div class="vpn__heading-content">
+              <h2 class="vpn__heading-title">WireGuard VPN</h2>
+              <div class="vpn__heading-description">
+                <p>A modern and resource-neutral VPN tunneling protocol.</p>
+                <p>
+                  Provides privacy and protection of your data when visiting websites and using
+                  applications. Provides additional security on public WiFi networks.
+                </p>
+              </div>
+            </div>
+
+            <div class="vpn__heading-platforms">
+              <h4 class="vpn__heading-platforms-title">Application for all platforms:</h4>
+
+              <div class="vpn__heading-platforms-content">
+                <figure class="vpn__heading-platforms-icon">
+                  <img
+                    class="vpn__heading-platforms-icon-image"
+                    src="./assets/platforms/windows.svg"
+                    alt="windows"
+                  />
+                </figure>
+                <figure class="vpn__heading-platforms-icon">
+                  <img
+                    class="vpn__heading-platforms-icon-image"
+                    src="./assets/platforms/apple.svg"
+                    alt="apple"
+                  />
+                </figure>
+                <figure class="vpn__heading-platforms-icon">
+                  <img
+                    class="vpn__heading-platforms-icon-image"
+                    src="./assets/platforms/android.svg"
+                    alt="android"
+                  />
+                </figure>
+                <figure class="vpn__heading-platforms-icon">
+                  <img
+                    class="vpn__heading-platforms-icon-image"
+                    src="./assets/platforms/ios.svg"
+                    alt="ios"
+                  />
+                </figure>
+                <figure class="vpn__heading-platforms-icon">
+                  <img
+                    class="vpn__heading-platforms-icon-image"
+                    src="./assets/platforms/linux.svg"
+                    alt="linux"
+                  />
+                </figure>
+                <figure class="vpn__heading-platforms-icon">
+                  <img
+                    class="vpn__heading-platforms-icon-image"
+                    src="./assets/platforms/server.svg"
+                    alt="server"
+                  />
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <div class="vpn__locations">
+            <button class="vpn__locations-button button button_secondary active">
+              <img
+                class="vpn__locations-button-icon"
+                src="./assets/switzerland-flag.svg"
+                alt="flag"
+              />
+              <span class="vpn__locations-button-text">Switzerland</span>
+            </button>
+            <button class="vpn__locations-button button button_secondary">
+              <img class="vpn__locations-button-icon" src="./assets/france-flag.svg" alt="flag" />
+              <span class="vpn__locations-button-text">France</span>
+            </button>
+            <button class="vpn__locations-button button button_secondary">
+              <img class="vpn__locations-button-icon" src="./assets/germany-flag.svg" alt="flag" />
+              <span class="vpn__locations-button-text">Germany</span>
+            </button>
+            <button class="vpn__locations-button button button_secondary">
+              <img class="vpn__locations-button-icon" src="./assets/italy-flag.svg" alt="flag" />
+              <span class="vpn__locations-button-text">Italy</span>
+            </button>
+            <button class="vpn__locations-button button button_secondary">
+              <img class="vpn__locations-button-icon" src="./assets/uk-flag.svg" alt="flag" />
+              <span class="vpn__locations-button-text">United Kingdom</span>
+            </button>
+
+            <button
+              class="vpn__locations-button vpn__locations-button_hidden button button_secondary"
+            >
+              <img
+                class="vpn__locations-button-icon"
+                src="./assets/switzerland-flag.svg"
+                alt="flag"
+              />
+              <span class="vpn__locations-button-text">Switzerland</span>
+            </button>
+            <button
+              class="vpn__locations-button vpn__locations-button_hidden button button_secondary"
+            >
+              <img class="vpn__locations-button-icon" src="./assets/france-flag.svg" alt="flag" />
+              <span class="vpn__locations-button-text">France</span>
+            </button>
+            <button
+              class="vpn__locations-button vpn__locations-button_hidden button button_secondary"
+            >
+              <img class="vpn__locations-button-icon" src="./assets/germany-flag.svg" alt="flag" />
+              <span class="vpn__locations-button-text">Germany</span>
+            </button>
+            <button
+              class="vpn__locations-button vpn__locations-button_hidden button button_secondary"
+            >
+              <img class="vpn__locations-button-icon" src="./assets/italy-flag.svg" alt="flag" />
+              <span class="vpn__locations-button-text">Italy</span>
+            </button>
+            <button
+              class="vpn__locations-button vpn__locations-button_hidden button button_secondary"
+            >
+              <img class="vpn__locations-button-icon" src="./assets/uk-flag.svg" alt="flag" />
+              <span class="vpn__locations-button-text">United Kingdom</span>
+            </button>
+
+            <button class="vpn__locations-show button button_secondary">
+              <span class="vpn__locations-show-more">Show More</span>
+              <span class="vpn__locations-show-less">Show Less</span>
+            </button>
+          </div>
+
+          <div class="vpn__order">
+            <div class="vpn__order-info">
+              <div class="vpn__order-info-title">Premium VPN</div>
+
+              <div class="vpn__order-info-price">2.12 €</div>
+
+              <div>
+                <div class="custom-select" data-value="1">
+                  <select id="vpnPeriod" name="vpnPeriod">
+                    <option value="1">1 Month</option>
+                    <option value="3">3 Month</option>
+                    <option value="6">6 Month</option>
+                    <option value="12">12 Month</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="vpn__order-main">
+              <div class="vpn__order-main-buy">
+                <button class="vpn__order-main-buy-button button button_primary">Buy VPN</button>
+              </div>
+
+              <ul class="vpn__order-main-advantages">
+                <li class="vpn__order-main-advantages-item">Speed up to 300 Mbps</li>
+                <li class="vpn__order-main-advantages-item">Unlimited traffic</li>
+                <li class="vpn__order-main-advantages-item">1 active device</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="plan-includes">
+        <div class="plan-includes__heading">
+          <div class="container">
+            <h2 class="plan-includes__title">Advantages</h2>
+          </div>
+        </div>
+
+        <div class="plan-includes__main">
+          <div class="container">
+            <div class="plan-includes__main-wrapper">
+              <div class="plan-includes__main-card">
+                <figure class="plan-includes__main-card-figure">
+                  <img
+                    class="plan-includes__main-card-figure-image"
+                    src="./assets/all-plans-1.svg"
+                    alt="all-plans"
+                  />
+                </figure>
+                <div class="plan-includes__main-card-text">Multiple PHP Versions</div>
+              </div>
+
+              <div class="plan-includes__main-card">
+                <figure class="plan-includes__main-card-figure">
+                  <img
+                    class="plan-includes__main-card-figure-image"
+                    src="./assets/all-plans-2.svg"
+                    alt="all-plans"
+                  />
+                </figure>
+                <div class="plan-includes__main-card-text">Premium Backups</div>
+              </div>
+
+              <div class="plan-includes__main-card">
+                <figure class="plan-includes__main-card-figure">
+                  <img
+                    class="plan-includes__main-card-figure-image"
+                    src="./assets/all-plans-3.svg"
+                    alt="all-plans"
+                  />
+                </figure>
+                <div class="plan-includes__main-card-text">
+                  Hosted in Switzerland and 40 other countries
+                </div>
+              </div>
+
+              <div class="plan-includes__main-card">
+                <figure class="plan-includes__main-card-figure">
+                  <img
+                    class="plan-includes__main-card-figure-image"
+                    src="./assets/all-plans-4.svg"
+                    alt="all-plans"
+                  />
+                </figure>
+                <div class="plan-includes__main-card-text">
+                  Unlimited Databases, E-Mail, Free SSL
+                </div>
+              </div>
+
+              <div class="plan-includes__main-card">
+                <figure class="plan-includes__main-card-figure">
+                  <img
+                    class="plan-includes__main-card-figure-image"
+                    src="./assets/all-plans-5.svg"
+                    alt="all-plans"
+                  />
+                </figure>
+                <div class="plan-includes__main-card-text">
+                  Additional Backups to another data center
+                </div>
+              </div>
+
+              <div class="plan-includes__main-card">
+                <figure class="plan-includes__main-card-figure">
+                  <img
+                    class="plan-includes__main-card-figure-image"
+                    src="./assets/all-plans-6.svg"
+                    alt="all-plans"
+                  />
+                </figure>
+                <div class="plan-includes__main-card-text">99.9% Uptime Guarantee</div>
+              </div>
+
+              <div class="plan-includes__main-card">
+                <figure class="plan-includes__main-card-figure">
+                  <img
+                    class="plan-includes__main-card-figure-image"
+                    src="./assets/all-plans-7.svg"
+                    alt="all-plans"
+                  />
+                </figure>
+                <div class="plan-includes__main-card-text">24/7 Customer Support</div>
+              </div>
+
+              <div class="plan-includes__main-card">
+                <figure class="plan-includes__main-card-figure">
+                  <img
+                    class="plan-includes__main-card-figure-image"
+                    src="./assets/all-plans-8.svg"
+                    alt="all-plans"
+                  />
+                </figure>
+                <div class="plan-includes__main-card-text">
+                  AI protection against DDoS, hacks and viruses
+                </div>
+              </div>
+
+              <div class="plan-includes__main-card plan-includes__main-card_wordpress">
+                <figure class="plan-includes__main-card-figure">
+                  <img
+                    class="plan-includes__main-card-figure-image"
+                    src="./assets/wordpress.svg"
+                    alt="all-plans"
+                  />
+                </figure>
+                <div class="plan-includes__main-card-text">
+                  Managed Wordpress: 1-click Installation, Acceleration, Auto Updates, Multisite
+                </div>
+              </div>
+
+              <div class="plan-includes__main-card">
+                <figure class="plan-includes__main-card-figure">
+                  <img
+                    class="plan-includes__main-card-figure-image"
+                    src="./assets/all-plans-9.svg"
+                    alt="all-plans"
+                  />
+                </figure>
+                <div class="plan-includes__main-card-text">Premium DNS</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__info">
+          <div class="footer__info-item">2024 © Unlyme SA</div>
+          <div class="footer__info-item">Rue Saint-Martin 7, 1003 Lausanne, Switzerland</div>
+        </div>
+
+        <div class="footer__logos">
+          <div class="footer__logos-item">
+            <img class="footer__logos-item-image" src="./assets/innovaud.svg" alt="innovaud" />
+          </div>
+          <div class="footer__logos-item">
+            <img class="footer__logos-item-image" src="./assets/sge.svg" alt="sge" />
+          </div>
+        </div>
+
+        <div class="footer__social">
+          <a class="footer__social-link footer__social-link_linkedin" href="#"></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -164,7 +164,29 @@ const webHostLocations = document.querySelector('.web-hosting__locations');
 const webHostLocationsShowButton = document.querySelector('.web-hosting__locations-show');
 
 if (webHostLocations && webHostLocationsShowButton) {
-  webHostLocationsShowButton.addEventListener('click', (event) => {
+  webHostLocationsShowButton.addEventListener('click', () => {
     webHostLocations.classList.toggle('shown');
+  });
+}
+
+////
+
+const vpnLocationsButtons = document.querySelectorAll('.vpn__locations-button');
+
+vpnLocationsButtons.forEach((button) => {
+  button.addEventListener('click', (event) => {
+    vpnLocationsButtons.forEach((button) => {
+      button.classList.remove('active');
+    });
+    event.currentTarget.classList.add('active');
+  });
+});
+
+const vpnLocations = document.querySelector('.vpn__locations');
+const vpnLocationsShowButton = document.querySelector('.vpn__locations-show');
+
+if (vpnLocations && vpnLocationsShowButton) {
+  vpnLocationsShowButton.addEventListener('click', () => {
+    vpnLocations.classList.toggle('shown');
   });
 }

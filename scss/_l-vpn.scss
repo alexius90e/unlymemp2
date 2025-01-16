@@ -1,0 +1,334 @@
+.vpn {
+  padding: 80px 0 140px;
+
+  @include laptop {
+    padding: 50px 0 120px;
+  }
+
+  @include mobile {
+    padding: 30px 0 100px;
+  }
+
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px 48px;
+    margin: 0 0 32px;
+
+    @include laptop {
+      flex-wrap: wrap;
+    }
+
+    @include mobile {
+      margin: 0 0 40px;
+    }
+
+    &-content {
+      flex: 0 1 584px;
+      box-sizing: border-box;
+
+      @include laptop {
+        flex: 1 1 100%;
+      }
+    }
+
+    &-title {
+      margin: 0 0 16px;
+      font-weight: 700;
+      font-size: 60px;
+      line-height: 130%;
+      text-transform: capitalize;
+      color: #000000;
+
+      @include laptop {
+        font-size: 40px;
+      }
+
+      @include mobile {
+        margin: 0 0 10px;
+        font-size: 30px;
+      }
+    }
+
+    &-description {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 140%;
+      color: #000000;
+
+      @include mobile {
+        gap: 10px;
+        font-size: 14px;
+      }
+
+      & > * {
+        margin: 0;
+      }
+    }
+
+    &-platforms {
+      flex: 0 0 400px;
+
+      @include mobile {
+        flex: 0 1 400px;
+      }
+
+      &-title {
+        margin: 0 0 14px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        color: #000000;
+
+        @include mobile {
+          font-size: 14px;
+        }
+      }
+
+      &-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+
+        @include mobile {
+          justify-content: flex-start;
+          flex-wrap: wrap;
+        }
+      }
+
+      &-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        box-sizing: border-box;
+        aspect-ratio: 1 / 1;
+        border: 1px solid #000000;
+        box-shadow: 5px 5px 0 0 #000000;
+
+        &-image {
+          display: block;
+          width: 24px;
+          aspect-ratio: 1 / 1;
+        }
+      }
+    }
+  }
+
+  &__locations {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px 32px;
+    margin: 0 0 80px;
+
+    @include laptop {
+      gap: 20px;
+    }
+
+    &-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      flex: 0 0 auto;
+      min-width: auto;
+      height: 40px;
+      padding: 7px 14px;
+
+      &_hidden {
+        @include laptop {
+          display: none;
+        }
+
+        .shown & {
+          @include laptop {
+            display: flex;
+          }
+        }
+      }
+
+      &.active {
+        background-color: #ffd209;
+      }
+
+      &-icon {
+        flex: 0 0 auto;
+        display: block;
+        max-width: 100%;
+        width: 24px;
+        height: 24px;
+        border-radius: 24px;
+        object-fit: cover;
+      }
+    }
+
+    &-show {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 40px;
+      padding: 7px 14px;
+      display: none;
+
+      @include laptop {
+        display: flex;
+      }
+
+      &::after {
+        content: '';
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: url(../assets/dropdown2.svg) center / 12px no-repeat;
+        transition: transform ease-in-out 0.2s;
+      }
+
+      .shown &::after {
+        transform: rotate(180deg);
+      }
+
+      &-more,
+      &-less {
+        pointer-events: none;
+      }
+
+      &-more {
+        display: inline-block;
+
+        .shown & {
+          display: none;
+        }
+      }
+
+      &-less {
+        display: none;
+
+        .shown & {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  &__order {
+    max-width: 594px;
+    box-sizing: border-box;
+    border: 2px solid #000;
+    box-shadow: 8px 8px 0 0 #000;
+    background: #fff;
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding: 20px 16px;
+      border-bottom: 2px solid #000000;
+
+      @include laptop {
+        gap: 20px;
+      }
+
+      &-title {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 130%;
+        text-transform: capitalize;
+        color: #000;
+      }
+
+      &-price {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 130%;
+        text-transform: capitalize;
+        color: #000;
+      }
+
+      & .custom-select {
+        & .select-selected {
+          padding: 16px 24px;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 100%;
+          text-transform: capitalize;
+          text-align: center;
+          color: #000;
+          border: 1px solid #000;
+          box-shadow: 4px 4px 0 0 #000;
+          background: #fff;
+
+          &::after {
+            width: 16px;
+            height: 12px;
+            background-size: cover;
+          }
+        }
+
+        & .select-item {
+          padding: 16px 14px;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 100%;
+          text-transform: capitalize;
+          text-align: center;
+          color: #000;
+        }
+      }
+    }
+
+    &-main {
+      padding: 20px 16px 42px;
+
+      @include mobile {
+        padding: 20px 16px 24px;
+      }
+
+      &-buy {
+        margin: 0 0 40px;
+
+        &-button {
+          width: 100%;
+          padding: 22px 24px;
+          font-size: 16px;
+        }
+      }
+
+      &-advantages {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        &-item {
+          position: relative;
+          display: flex;
+          align-items: flex-start;
+          gap: 10px;
+          padding-bottom: 10px;
+
+          &::before {
+            content: '';
+            flex: 0 0 auto;
+            display: block;
+            width: 21px;
+            height: 21px;
+            box-sizing: border-box;
+            border: 1px solid #000000;
+            border-radius: 24px;
+            background: url(../assets/point-ok.svg) center / cover no-repeat;
+            background-color: #ffd209;
+            box-shadow: 2px 2px 0 #000000;
+          }
+        }
+      }
+    }
+  }
+}
