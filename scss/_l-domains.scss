@@ -55,6 +55,125 @@
       line-height: 150%;
       color: #000;
     }
+
+    &-list {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      &-item {
+        padding: 16px 0 28px;
+        border-bottom: 1px solid #000000;
+
+        &:first-child {
+          padding-top: 0;
+        }
+
+        &-top {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 24px;
+          margin: 0 0 14px;
+        }
+
+        &-title {
+          margin: 0;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 150%;
+          color: #000;
+        }
+
+        &-close {
+          display: block;
+          flex: 0 0 auto;
+          width: 20px;
+          height: 20px;
+          background: url(../assets/cancel-circle.svg) center / cover no-repeat;
+          cursor: pointer;
+        }
+
+        &-price {
+          display: flex;
+          justify-content: space-between;
+          gap: 14px;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 150%;
+          color: #000;
+
+          &-value {
+            flex: 0 0 auto;
+            text-decoration: none;
+          }
+
+          &_old {
+            margin: 0 0 4px;
+
+            &-value {
+              text-decoration: line-through;
+            }
+          }
+
+          &_new {
+            font-weight: 500;
+            color: #d80027;
+          }
+        }
+      }
+    }
+
+    &:has(&-list-item) &-empty {
+      display: none;
+    }
+
+    &-total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      margin: 10px 0 0;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 150%;
+      color: #000;
+
+      &-title {
+        flex: 1 1 auto;
+      }
+
+      &-price {
+        display: flex;
+        align-items: center;
+        flex: 0 0 auto;
+      }
+    }
+
+    &:not(:has(&-list-item)) &-total {
+      display: none;
+    }
+
+    &-more {
+      margin: 32px  0 0 ;
+
+      &-button {
+        min-height: 48px;
+
+        &::after {
+          content: '';
+          display: block;
+          flex: 0 0 auto;
+          height: 16px;
+          width: 16px;
+          background: url(../assets/arrow-right.svg) center / cover no-repeat;
+        }
+      }
+    }
+
+    &:not(:has(&-list-item)) &-more {
+      display: none;
+    }
   }
 
   &__main {
@@ -187,7 +306,7 @@
     }
 
     &-results {
-      // display: none;
+      display: none;
       margin: 40px 0 24px;
 
       &-top {
