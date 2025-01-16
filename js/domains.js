@@ -29,12 +29,28 @@ const searchResults = document.querySelectorAll('.domains__search-results-list-i
 
 searchResults.forEach((searchResult) =>
   searchResult.addEventListener('click', (event) => {
-    const isAddToCartBtn = event.target.classList.contains(
-      'domains__search-results-list-item-addtocart'
-    );
+    const baseClassName = 'domains__search-results-list-item';
+    const isAddToCartBtn = event.target.classList.contains(`${baseClassName}-addtocart`);
+    const isWhoIsBtn = event.target.classList.contains(`${baseClassName}-whois`);
     if (isAddToCartBtn) {
       event.currentTarget.classList.add('active');
       updateDomainOrderList();
+    }
+    if (isWhoIsBtn) {
+      const modal = event.currentTarget.querySelector('.domains__search-modal');
+      if (modal) modal.classList.add('active');
+    }
+  })
+);
+
+const domainsSearchModals = document.querySelectorAll('.domains__search-modal');
+
+domainsSearchModals.forEach((modal) =>
+  modal.addEventListener('click', (event) => {
+    const isLayout = event.target === event.currentTarget;
+    const isClose = event.target.classList.contains('domains__search-modal-close');
+    if (isLayout || isClose) {
+      event.currentTarget.classList.remove('active');
     }
   })
 );
