@@ -460,7 +460,7 @@
     }
 
     &-results {
-      display: none;
+      // display: none;
       margin: 40px 0 24px;
 
       &-top {
@@ -491,8 +491,6 @@
           font-weight: 400;
           font-size: 16px;
           line-height: 120%;
-          text-decoration: underline;
-          text-decoration-skip-ink: none;
           color: rgba(0, 0, 0, 0.7);
           border: none;
           background: none;
@@ -500,6 +498,13 @@
 
           @include laptop {
             font-size: 14px;
+          }
+
+          &-visible,
+          &-hidden {
+            text-decoration: underline;
+            text-decoration-skip-ink: none;
+            text-underline-offset: 4px;
           }
 
           &-visible {
@@ -697,6 +702,47 @@
 
       &.freeonly &-list-item.busy {
         display: none;
+      }
+
+      &-more {
+        margin: 24px 0 0;
+
+        &-button {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          gap: 24px;
+          width: 200px;
+          padding: 0 16px 13px 0;
+          box-sizing: border-box;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 120%;
+          color: #000;
+          border: none;
+          border-bottom: 2px solid #000000;
+          background-color: rgba($color: #ffffff, $alpha: 0);
+          cursor: pointer;
+
+          @include mobile {
+            width: 100%;
+            padding: 0 20px 11px 0;
+            font-size: 14px;
+          }
+
+          &::after {
+            content: '';
+            display: block;
+            flex: 0 0 auto;
+            width: 20px;
+            aspect-ratio: 1 / 1;
+            background: url(../assets/plus-sign.svg) center / cover no-repeat;
+
+            @include mobile {
+              width: 13px;
+            }
+          }
+        }
       }
     }
 

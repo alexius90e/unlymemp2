@@ -3647,8 +3647,13 @@ img {
   padding: 60px 0 55px;
   border-bottom: 2px solid #000000;
   background: url(../assets/sun-bg.svg) center no-repeat;
-  background-size: auto 100%;
+  background-size: calc(100% + 248px) auto;
   background-color: #ffd209;
+}
+@media (max-width: 1024px) {
+  .vpn-advantages__main {
+    background-size: auto calc(100% + 64px);
+  }
 }
 .vpn-advantages__main-wrapper {
   display: -webkit-box;
@@ -4336,7 +4341,6 @@ img {
   }
 }
 .domains__search-results {
-  display: none;
   margin: 40px 0 24px;
 }
 .domains__search-results-top {
@@ -4373,9 +4377,6 @@ img {
   font-weight: 400;
   font-size: 16px;
   line-height: 120%;
-  text-decoration: underline;
-  -webkit-text-decoration-skip-ink: none;
-          text-decoration-skip-ink: none;
   color: rgba(0, 0, 0, 0.7);
   border: none;
   background: none;
@@ -4385,6 +4386,12 @@ img {
   .domains__search-results-top-hideoccupied {
     font-size: 14px;
   }
+}
+.domains__search-results-top-hideoccupied-visible, .domains__search-results-top-hideoccupied-hidden {
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  text-underline-offset: 4px;
 }
 .domains__search-results-top-hideoccupied-visible {
   display: inline-block;
@@ -4579,6 +4586,55 @@ img {
 }
 .domains__search-results.freeonly .domains__search-results-list-item.busy {
   display: none;
+}
+.domains__search-results-more {
+  margin: 24px 0 0;
+}
+.domains__search-results-more-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 24px;
+  width: 200px;
+  padding: 0 16px 13px 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 120%;
+  color: #000;
+  border: none;
+  border-bottom: 2px solid #000000;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+}
+@media (max-width: 576px) {
+  .domains__search-results-more-button {
+    width: 100%;
+    padding: 0 20px 11px 0;
+    font-size: 14px;
+  }
+}
+.domains__search-results-more-button::after {
+  content: "";
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 20px;
+  aspect-ratio: 1/1;
+  background: url(../assets/plus-sign.svg) center/cover no-repeat;
+}
+@media (max-width: 576px) {
+  .domains__search-results-more-button::after {
+    width: 13px;
+  }
 }
 .domains__search.search .domains__search-results {
   display: block;
